@@ -15,3 +15,12 @@
 //= require materialize-sprockets
 //= require jquery.mb.YTPlayer.min
 //= require jquery.payment
+
+(function($){
+  $(function(){
+
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+
+  }); // end of document ready
+})(jQuery); // end of jQuery name space
