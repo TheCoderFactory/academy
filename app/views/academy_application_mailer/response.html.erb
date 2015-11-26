@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Thanks for Applying!</h1>
+
+    <p>
+    <%= @academy_application.first_name %>, your application has been recieved, you should hear from us within the next two days. Below is a confirmation of your application.
+    </p>
+
+    <p>
+    <strong>First name:</strong>
+    <%= @academy_application.first_name %>
+    </p>
+
+    <p>
+    <strong>Last name:</strong>
+    <%= @academy_application.last_name %>
+    </p>
+
+    <p>
+    <strong>City:</strong>
+    <%= @academy_application.city %>
+    </p>
+
+    <p>
+    <strong>Country:</strong>
+    <%= @academy_application.country %>
+    </p>
+
+    <p>
+    <strong>Email:</strong>
+    <%= @academy_application.email %>
+    </p>
+
+    <p>
+    <strong>Age:</strong>
+    <%= @academy_application.age %>
+    </p>
+
+    <p>
+    <strong>Gender:</strong>
+    <%= @academy_application.gender %>
+    </p>
+
+    <p>
+    <strong>Use one sentence to describe yourself:</strong>
+    <%= @academy_application.one_line %>
+    </p>
+
+    <p>
+    <strong>Please tell us why you are applying for this course:</strong>
+    <%= @academy_application.reason %>
+    </p>
+
+    <p>
+    <strong>What is your background? Career, study, interests?</strong>
+    <%= @academy_application.info %>
+    </p>
+
+    <p>
+    <strong>What is your passion in life?</strong>
+    <%= @academy_application.passion %>
+    </p>
+
+    <p>
+    <strong>Please describe what technology you have experience with, if any:</strong>
+    <%= @academy_application.experience %>
+    </p>
+
+    <p>
+    <strong>Write a couple of paragraphs about a time you faced a challenge in life and overcame it:</strong>
+    <%= @academy_application.challenge %>
+    </p>
+
+    <p>
+    <strong>Why should we choose you to be a student in this program?</strong>
+    <%= @academy_application.special %>
+    </p>
+
+    <p>
+    <strong>Relevant links:</strong>
+    <%= @academy_application.links %>
+    </p>
+
+    <p>
+    <strong>How did you hear about this program?</strong>
+    <%= @academy_application.referral %>
+    </p>
+  </body>
+</html>

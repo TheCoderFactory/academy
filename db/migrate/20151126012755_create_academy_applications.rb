@@ -1,6 +1,6 @@
-class CreateApplications < ActiveRecord::Migration
+class CreateAcademyApplications < ActiveRecord::Migration
   def change
-    create_table :applications do |t|
+    create_table :academy_applications do |t|
       t.string :first_name
       t.string :last_name
       t.string :city

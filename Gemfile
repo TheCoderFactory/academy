@@ -40,6 +40,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use simple form for forms
+gem 'simple_form'
+gem 'country_select'
+
+# Use responders gem
+gem 'responders'
+
+# Sucker_punch gem
+gem 'sucker_punch'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
