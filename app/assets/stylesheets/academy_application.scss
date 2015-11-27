@@ -2,17 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.btn-large{
-    text-decoration: none;
-    color: #fff;
+.submit-button {
+    color: black;
     background-color: white;
-    border: white solid 3px;
-    text-align: center;
-    letter-spacing: 1px;
-    -webkit-transition: 0.2s ease-out;
-    -moz-transition: 0.2s ease-out;
-    -o-transition: 0.2s ease-out;
-    -ms-transition: 0.2s ease-out;
-    transition: 0.2s ease-out;
-    cursor: pointer;
+    border: none;
 }
