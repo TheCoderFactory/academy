@@ -9,5 +9,10 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @enquiry = Enquiry.new
+  end
+
+  def confirmation
+    @type = params[:type]
   end
 end

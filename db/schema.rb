@@ -37,7 +37,8 @@ ActiveRecord::Schema.define(version: 20151126014934) do
   end
 
   create_table "enquiries", force: :cascade do |t|
-    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "phone"
     t.string   "email"
     t.text     "message"

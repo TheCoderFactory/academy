@@ -1,14 +1,25 @@
 <%= simple_form_for(@enquiry) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :phone %>
-    <%= f.input :email %>
-    <%= f.input :message %>
+  <div class="row">
+    <div class="form-group input-field col s6">
+      <%= f.input :first_name, label: "First Name", input_html: {class: "form-control"} %>
+    </div>
+    <div class="form-group input-field col s6">
+      <%= f.input :last_name, label: "Last Name", input_html: {class: "form-control"} %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group input-field col s3">
+      <%= f.input :phone, label: "Contact Number", input_html: {class: "form-control"} %>
+    </div>
+    <div class="form-group input-field col s9">
+      <%= f.input :email, label: "Email Address", input_html: {class: "form-controli"} %>
+    </div>
+  </div>
+  <div class="form-group input-field">
+    <%= f.input :message, label: "Enquiry", input_html: {class: "form-control materialize-textarea"} %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+  <%= f.button :submit, class: "btn-large submit-button" %>
 <% end %>

@@ -10,17 +10,16 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   resources :academy_applications
-  get "apply"                     => "academy_applications#new"
+  get "apply"         => "academy_applications#new"
 
   resources :enquiries
-  get "enquire"                   => "enquiries#new"
+  get "enquire"       => "enquiries#new"
 
-  get "application-confirmation"  => "confirmation#application"
-  get "enquiry-confirmation"      => "confirmation#enquiry"
-  get "faq"         => "pages#faq"
-  get "curriculum"  => "pages#curriculum"
-  get "about"       => "pages#about"
-  get "contact"     => "pages#contact"
+  get "faq"           => "pages#faq"
+  get "curriculum"    => "pages#curriculum"
+  get "about"         => "pages#about"
+  get "contact"       => "pages#contact"
+  get "confirmation"  => "pages#confirmation"
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
