@@ -15,4 +15,10 @@ class PagesController < ApplicationController
   def confirmation
     @type = params[:type]
   end
+
+  def privacy
+  end
+
+  def community
+  end
 end

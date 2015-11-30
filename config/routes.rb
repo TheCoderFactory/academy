@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get "curriculum"    => "pages#curriculum"
   get "about"         => "pages#about"
   get "contact"       => "pages#contact"
+  get "privacy"       => "pages#privacy"
+  get "community"     => "pages#community"
   get "confirmation"  => "pages#confirmation"
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
