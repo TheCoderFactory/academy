@@ -9,6 +9,14 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  resources :academy_applications
+  get "apply"                     => "academy_applications#new"
+
+  resources :enquiries
+  get "enquire"                   => "enquiries#new"
+
+  get "application-confirmation"  => "confirmation#application"
+  get "enquiry-confirmation"      => "confirmation#enquiry"
   get "faq"         => "pages#faq"
   get "curriculum"  => "pages#curriculum"
   get "about"       => "pages#about"
