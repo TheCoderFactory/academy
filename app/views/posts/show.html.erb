@@ -1,0 +1,38 @@
+<%= content_for :title, @post.title + ' [@CoderFactory Blog]' %>
+<%= content_for :description, @post.title + ': ' + @post.lead %>
+<%= content_for :image, @post.image %>
+<%= content_for :tagline, @post.published_date.strftime('%d %B %Y') %>
+
+<section class="light-blue" id="top-section">
+  <div class="container">
+
+    <div class="row">
+      <div class="col s12 m9">
+        <div class="card">
+          <div class="card-image">
+            <%= link_to post_path(@post) do %>
+              <%= image_tag(@post.image) %>
+            <% end %>
+          </div>
+          <div class="card-content blog-post">
+            <%= link_to post_path(@post) do %><h1><span class="card-title grey-text text-darken-2"><%= @post.title %></span></h1><% end %>
+            <div class="chip">
+              <img src="<%= asset_path @post.image %>" alt="<%= @post.user.first_name %>">
+              <%= @post.user.first_name %> <%= @post.user.last_name %>
+            </div>
+            <div class="chip">
+              <%= @post.published_date.strftime('%d %B %Y') %>
+            </div>
+            <hr>
+            <p class="flow-text"><%= @post.lead %></p>
+
+            <div class="flow-text">
+              <%= @post.content.html_safe %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

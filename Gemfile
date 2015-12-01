@@ -54,6 +54,16 @@ gem 'sucker_punch'
 # Devise gem
 gem 'devise'
 
+# Paperclip gem
+gem 'paperclip'
+
+# Ckeditor gem
+gem 'ckeditor'
+
+# Paginate gems
+gem 'will_paginate-materialize'
+gem 'will_paginate'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

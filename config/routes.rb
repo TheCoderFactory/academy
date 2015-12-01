@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # get 'home/index'
+  mount Ckeditor::Engine => '/ckeditor'
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
 
   # You can have the root of your site routed with "root"
   root "home#index"
@@ -16,6 +17,8 @@ Rails.application.routes.draw do
   resources :enquiries
   get "enquire"       => "enquiries#new"
 
+  resources :posts
+
   get "faq"           => "pages#faq"
   get "curriculum"    => "pages#curriculum"
   get "about"         => "pages#about"
@@ -23,6 +26,8 @@ Rails.application.routes.draw do
   get "privacy"       => "pages#privacy"
   get "community"     => "pages#community"
   get "confirmation"  => "pages#confirmation"
+
+  get "blog"          => "blog#index"
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

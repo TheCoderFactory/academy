@@ -1,0 +1,55 @@
+<div class="container">
+<div class="row">
+  <div class="card blue-grey darken-1">
+    <div class="card-content white-text">
+      <div class="row">
+        <div class="col s4">
+          <span class="card-title">Name</span>
+          <p><%= @academy_application.first_name %> <%= @academy_application.last_name %></p>
+        </div>
+        <div class="col s4">
+          <span class="card-title">Age</span>
+          <p><%= @academy_application.age %></p>
+        </div>
+        <div class="col s4">
+          <span class="card-title">Gender</span>
+          <p><%= @academy_application.gender %></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6">
+          <span class="card-title">Location</span>
+          <p><%= @academy_application.city %>, <%= @academy_application.country %></p>
+        </div>
+        <div class="col s6">
+          <span class="card-title">Email</span>
+          <p><%= @academy_application.email %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="card blue-grey darken-1">
+    <div class="card-content white-text">
+      <span class="card-title">One Line</span>
+      <p><%= @academy_application.one_line %></p>
+      <span class="card-title">Reason</span>
+      <p><%= @academy_application.reason %></p>
+      <span class="card-title">Info</span>
+      <p><%= @academy_application.info %></p>
+      <span class="card-title">Passion</span>
+      <p><%= @academy_application.passion %></p>
+      <span class="card-title">Experience</span>
+      <p><%= @academy_application.experience %></p>
+      <span class="card-title">Challenge</span>
+      <p><%= @academy_application.challenge %></p>
+      <span class="card-title">Special</span>
+      <p><%= @academy_application.special %></p>
+      <span class="card-title">Links</span>
+      <p><%= @academy_application.links %></p>
+    </div>
+  </div>
+</div>
+</div>

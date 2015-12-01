@@ -16,6 +16,7 @@
 //= require materialize-sprockets
 //= require jquery.mb.YTPlayer.min
 //= require jquery.payment
+//= require ckeditor/init
 
 (function($){
   $(function(){

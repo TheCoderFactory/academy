@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col m4 s12">
+      <div class="col m4 s6">
         <h5 class="white-text">Links</h5>
         <ul>
           <li><a class="grey-text text-lighten-3" href="/about">About us</a></li>
@@ -17,14 +17,35 @@
           <li><a class="grey-text text-lighten-3" href="/privacy">Privacy</a></li>
         </ul>
       </div>
+      <div class="col m4 s6">
+        <h5 class="white-text">Social Media</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/thecoderfactory/">Facebook</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://twitter.com/coderfactory">Twitter</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/company/the-coder-factory">LinkedIn</a></li>
+        </ul>
+      </div>
+      <% if current_user %>
+        <div class="col m4">
+          <h5 class="white-text">Admin</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="/academy_applications">Coderfactory Academy Applications</a></li>
+            <li><a class="grey-text text-lighten-3" href="/enquiries">Enquires</a></li>
+            <li><a class="grey-text text-lighten-3" href="/posts">Your Blog Posts</a></li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
     </div>
   </div>
   <div class="footer-copyright">
     <div class="container">
     © <%= Date.today.year %> Coder Factory
-    <a class="grey-text text-lighten-4 right" href="/contact">Contact us</a>
-   
-    
+    <% if current_user %>
+      <p class="grey-text text-lighten-4 right">Currently logged in as: <%= current_user.email %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "grey-text text-lighten-4") %></p>
+    <% else %>
+      <a class="grey-text text-lighten-4 right" href="/users/sign_in">Sign in</a>
+    <% end %>
     </div>
   </div>
 </footer>

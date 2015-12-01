@@ -1,4 +1,10 @@
 class EnquiriesController < ApplicationController
+  before_action :authenticate_user! , only: [:index, :show]
+
+  def index
+    @enquiries = Enquiry.all
+  end
+
   def new
     @enquiry = Enquiry.new
     respond_with(@enquiry)
@@ -12,6 +18,10 @@ class EnquiriesController < ApplicationController
     else
       respond_with(@enquiry)
     end
+  end
+
+  def show
+    @enquiry = Enquiry.find(params[:id])
   end
 
   private

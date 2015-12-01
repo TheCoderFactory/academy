@@ -1,4 +1,10 @@
 class AcademyApplicationsController < ApplicationController
+  before_action :authenticate_user! , only: [:index, :show]
+
+  def index
+    @academy_applications = AcademyApplication.all
+  end
+
   def new
     @academy_application = AcademyApplication.new
     respond_with(@academy_application)
@@ -14,8 +20,12 @@ class AcademyApplicationsController < ApplicationController
     end
   end
 
+  def show
+    @academy_application = AcademyApplication.find(params[:id])
+  end
+
   private
   def academy_application_params
-    params.require(:academy_application).permit(:first_name, :last_name, :city, :country, :email, :age, :gender, :one_line, :reason, :info, :passion, :experience, :challenge, :special, :links, :referral, :visa, :programme_choice)
+    params.require(:academy_application).permit(:first_name, :last_name, :city, :country, :email, :age, :gender, :one_line, :reason, :info, :passion, :experience, :challenge, :special, :links)
   end
 end
