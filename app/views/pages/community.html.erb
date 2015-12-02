@@ -1,7 +1,7 @@
 <%= content_for :title, 'Join the Coder Factory Community' %>
 <%= content_for :description, 'Check out the great community events and supportive partners. Join our thriving community of creators, makers and coders.' %>
 
-<section class="light-blue community valign-wrapper" id="top-section">
+<section class="community valign-wrapper" id="top-section">
   <div class="container">
     <center>
       <svg width="1100" height="120" style="font-family: 'minerva-modern';">
@@ -15,14 +15,22 @@
   </div>
 </section>
 
-<section class="grey lighten-2">
+<section>
   <div class="container">
-    <%= render 'volunteer' %>
+    <div class="card">
+      <div class="container">
+        <%= render 'volunteer' %>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="light-blue">
+<section>
   <div class="container">
-    <%= render 'coder_club' %>
+    <div class="card">
+      <div class="container">
+        <%= render 'coder_club' %>
+      </div>
+    </div>
   </div>
 </section>

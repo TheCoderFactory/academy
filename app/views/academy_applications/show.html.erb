@@ -1,28 +1,28 @@
 <div class="container">
 <div class="row">
-  <div class="card blue-grey darken-1">
-    <div class="card-content white-text">
+  <div class="card">
+    <div class="card-content black-text">
       <div class="row">
         <div class="col s4">
-          <span class="card-title">Name</span>
+          <span class="card-title black-text">Name</span>
           <p><%= @academy_application.first_name %> <%= @academy_application.last_name %></p>
         </div>
         <div class="col s4">
-          <span class="card-title">Age</span>
+          <span class="card-title black-text">Age</span>
           <p><%= @academy_application.age %></p>
         </div>
         <div class="col s4">
-          <span class="card-title">Gender</span>
+          <span class="card-title black-text">Gender</span>
           <p><%= @academy_application.gender %></p>
         </div>
-      </div>
+      </div><br>
       <div class="row">
-        <div class="col s6">
-          <span class="card-title">Location</span>
+        <div class="col s4">
+          <span class="card-title black-text">Location</span>
           <p><%= @academy_application.city %>, <%= @academy_application.country %></p>
         </div>
-        <div class="col s6">
-          <span class="card-title">Email</span>
+        <div class="col s8">
+          <span class="card-title black-text">Email</span>
           <p><%= @academy_application.email %></p>
         </div>
       </div>
@@ -31,23 +31,23 @@
 </div>
 
 <div class="row">
-  <div class="card blue-grey darken-1">
-    <div class="card-content white-text">
-      <span class="card-title">One Line</span>
-      <p><%= @academy_application.one_line %></p>
-      <span class="card-title">Reason</span>
-      <p><%= @academy_application.reason %></p>
-      <span class="card-title">Info</span>
-      <p><%= @academy_application.info %></p>
-      <span class="card-title">Passion</span>
-      <p><%= @academy_application.passion %></p>
-      <span class="card-title">Experience</span>
-      <p><%= @academy_application.experience %></p>
-      <span class="card-title">Challenge</span>
-      <p><%= @academy_application.challenge %></p>
-      <span class="card-title">Special</span>
-      <p><%= @academy_application.special %></p>
-      <span class="card-title">Links</span>
+  <div class="card">
+    <div class="card-content black-text">
+      <span class="card-title black-text">Use one sentence to describe yourself.</span>
+      <p><%= @academy_application.one_line %></p><br>
+      <span class="card-title black-text">Please tell us why you are applying for this course.</span>
+      <p><%= @academy_application.reason %></p><br>
+      <span class="card-title black-text">What is your background? Career, study, interests?</span>
+      <p><%= @academy_application.info %></p><br>
+      <span class="card-title black-text">What is your main passion in life?</span>
+      <p><%= @academy_application.passion %></p><br>
+      <span class="card-title black-text">Please tell us what technology you have experience with, if any.</span>
+      <p><%= @academy_application.experience %></p><br>
+      <span class="card-title black-text">Write a couple of paragraphs about a time you faced a chalenge in life and overcame it.</span>
+      <p><%= @academy_application.challenge %></p><br>
+      <span class="card-title black-text">Why should we choose you to be a student in this program?</span>
+      <p><%= @academy_application.special %></p><br>
+      <span class="card-title black-text">Provide any links that may help us learn about you.</span>
       <p><%= @academy_application.links %></p>
     </div>
   </div>
