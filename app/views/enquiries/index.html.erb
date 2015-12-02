@@ -1,3 +1,42 @@
-<% @enquiries.each do |e| %>
-  <%= link_to "View", e %>
-<% end %>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<section id="top-section">
+  <div class="container">
+    <div class="row">
+      <div class="col m11 offset-m1">
+        <h1>Academy Applications</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m10 offset-m1">
+        <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th width="50%">Name</th>
+              <th width="25%">Date Received</th>
+              <th>Views</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @enquiries.each do |e| %>
+              <tr>
+                <td><%= e.first_name %> <%= e.last_name %></td>
+                <td><%= e.created_at %></td>
+                <td><%= link_to '<i class="fa fa-eye"></i> View'.html_safe, e %></td>
+                <td><%= link_to '<i class="fa fa-trash-o"></i> Delete'.html_safe, e, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        </div>
+        <div class="card">
+           <div class="container">
+             <center>
+               <%= will_paginate @enquiries %>
+             </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

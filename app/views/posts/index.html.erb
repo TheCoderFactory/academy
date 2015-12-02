@@ -1,4 +1,4 @@
-<section id="top-section" class="light-blue">
+<section id="top-section">
 <div class="container">
   <div class="row">
     <div class="col m12">
@@ -21,12 +21,13 @@
             <tbody>
               <% @posts.each do |post| %>
                 <tr>
-                  <td><%= link_to post.title, post %></td>
+                  <td><%= post.title%></td>
                   <td><%= post.user.first_name if post.user %></td>
                   <td><%= '<i class="fa fa-check"></i>'.html_safe if post.publish %></td>
                   <td><%= post.published_date.strftime('%d/%b/%y') %></td>
-                  <td><%= link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_post_path(post) %></td>
-                  <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <td><%= link_to '<i class="fa fa-eye"></i> View'.html_safe, post %></td>
+                  <td><%= link_to '<i class="fa fa-pencil"></i> Edit'.html_safe, edit_post_path(post) %></td>
+                  <td><%= link_to '<i class="fa fa-trash-o"></i> Delete'.html_safe, post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                 </tr>
               <% end %>
             </tbody>

@@ -2,7 +2,7 @@ class EnquiriesController < ApplicationController
   before_action :authenticate_user! , only: [:index, :show]
 
   def index
-    @enquiries = Enquiry.all
+    @enquiries = Enquiry.all.reverse_order.paginate(:page => params[:page], :per_page => 1)
   end
 
   def new
