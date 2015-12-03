@@ -1,6 +1,5 @@
 <%= simple_form_for(@post) do |f| %>
   <%= f.error_notification %>
-
   <div class="form-inputs">
     <div class="form-group input-field">
       <%= f.input :title %>
@@ -15,7 +14,7 @@
             </div>
           </div>
           <div class="col s10">
-            <input class="file-path validate" type="text" placeholder="Upload an opening image.">
+            <input class="file-path validate" type="text" placeholder="Upload an opening image. Can't be empty.">
           </div>
         </div>
       </div>
@@ -29,7 +28,7 @@
     </div>
     <div>
       <label for="published_date">Date Published</label>
-      <%= f.text_field :published_date, class: "datepicker" %>
+      <%= f.text_field :published_date, class: "datepicker", placeholder: "Select a published date. Can't be empty." %>
     </div>
   </div>
 

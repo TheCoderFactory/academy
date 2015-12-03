@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post
     else
-      repsond_with(@post)
+      respond_with(@post)
     end
   end
 
