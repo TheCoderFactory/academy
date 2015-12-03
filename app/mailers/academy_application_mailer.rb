@@ -18,6 +18,6 @@ class AcademyApplicationMailer < ApplicationMailer
   #
   def received(academy_application_id)
     @academy_application = AcademyApplication.find(academy_application_id)
-    mail(to: "to@example.org", subject: "Coder Factory Academy application received.")
+    mail(to: "info@coderfactory.com", subject: "Coder Factory Academy application received.")
   end
 end

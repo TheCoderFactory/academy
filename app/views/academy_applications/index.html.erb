@@ -21,7 +21,7 @@
             <% @academy_applications.each do |app| %>
               <tr>
                 <td><%= app.first_name %> <%= app.last_name %></td>
-                <td><%= app.created_at %></td>
+                <td><%= app.created_at.strftime('%d %B %Y')  %></td>
                 <td><%= link_to '<i class="fa fa-eye"></i> View'.html_safe, app %></td>
                 <td><%= link_to '<i class="fa fa-trash-o"></i> Delete'.html_safe, app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>

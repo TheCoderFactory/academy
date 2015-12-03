@@ -26,6 +26,6 @@ class AcademyApplicationsController < ApplicationController
 
   private
   def academy_application_params
-    params.require(:academy_application).permit(:first_name, :last_name, :city, :country, :email, :age, :gender, :one_line, :reason, :info, :passion, :experience, :challenge, :special, :links)
+    params.require(:academy_application).permit(:first_name, :last_name, :city, :country, :email, :age, :gender, :one_line, :reason, :info, :passion, :experience, :challenge, :special, :links, :referral)
   end
 end

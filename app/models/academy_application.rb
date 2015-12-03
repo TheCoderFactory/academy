@@ -1,4 +1,12 @@
 class AcademyApplication < ActiveRecord::Base
+  EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
+  validates :first_name, :last_name, presence: true
+  validates :city, presence: true
+  validates :email, presence: true, :format => EMAIL_REGEX
+  validates :age, presence: true
+  validates :one_line, :reason, :info, :passion, :experience, :challenge, :special, :links, :referral, presence: true
+  validates :referral, length: { maximum: 200 }
+
   def send_emails
     AcademyApplicationMailerJob.new.async.perform(self.id)
   end

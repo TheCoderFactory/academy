@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user! , only: [:index, :new, :create, :edit, :update, :destroy]
 
   def index
-    @posts = current_user.posts
+    @posts = current_user.posts.published_in_reverse_chron_order.paginate(:page => params[:page], :per_page => 1)
   end
 
   def new

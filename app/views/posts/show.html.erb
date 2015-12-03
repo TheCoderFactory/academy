@@ -5,19 +5,24 @@
 
 <section id="top-section">
   <div class="container">
-
     <div class="row">
       <div class="col m12">
         <div class="card">
           <div class="card-image">
             <%= link_to post_path(@post) do %>
-              <%= image_tag(@post.image) %>
+              <% if @post.image.file? %>
+                <%= image_tag(@post.image) %>
+              <% end %>
             <% end %>
           </div>
           <div class="card-content blog-post">
             <%= link_to post_path(@post) do %><h1><span class="card-title grey-text text-darken-2"><%= @post.title %></span></h1><% end %>
             <div class="chip">
-              <img src="<%= asset_path @post.image %>" alt="<%= @post.user.first_name %>">
+              <% if @post.user.image.file? %>
+                <img src="<%= asset_path @post.user.image %>" alt="<%= @post.user.first_name %>">
+              <% else %>
+                <i class="fa fa-user"></i>
+              <% end %>
               <%= @post.user.first_name %> <%= @post.user.last_name %>
             </div>
             <div class="chip">
@@ -30,7 +35,6 @@
               <%= @post.content.html_safe %>
             </div>
           </div>
-
         </div>
       </div>
     </div>

@@ -18,6 +18,6 @@ class EnquiryMailer < ApplicationMailer
   #
   def received(enquiry_id)
     @enquiry = Enquiry.find(enquiry_id)
-    mail(to: "to@example.org", subject: "Coder Factory Academy enquiry received.")
+    mail(to: "info@coderfactory.com", subject: "Coder Factory Academy enquiry received.")
   end
 end

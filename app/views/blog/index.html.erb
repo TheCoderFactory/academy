@@ -11,6 +11,9 @@
         <%= render @posts %>
         <div class="card"><div class="card-content">
             <center>
+              <% if @posts.size == 0 %>
+                <h2> There are currently no blog posts. Check back later.</h2>
+              <% end %>
               <%= will_paginate @posts, renderer: MaterializePagination::Rails %>
             </center>
           </div>
