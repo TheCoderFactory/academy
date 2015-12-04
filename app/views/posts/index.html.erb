@@ -2,10 +2,10 @@
 <div class="container">
   <div class="row">
     <div class="col m12">
-      <h2>All Posts</h2>
+      <h2>Your Posts</h2>
       <div class="card">
         <div class="card-content">
-          <%= link_to 'New Post', new_post_path, class: 'btn' %>
+          <%= link_to 'New Post', new_post_path, class: 'btn btn-large submit-button' %>
           <table class="table">
             <thead>
               <tr>
@@ -32,6 +32,11 @@
               <% end %>
             </tbody>
           </table>
+          <% if @posts.size == 0 %>
+            <center>
+              <h3>You currently have no posts.<br> Fix this using the "New Post" button located above.</h3>
+            </center>
+          <% end %>
         </div>
       </div>
       <div class="card">

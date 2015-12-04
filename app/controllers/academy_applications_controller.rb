@@ -1,5 +1,5 @@
 class AcademyApplicationsController < ApplicationController
-  before_action :authenticate_user! , only: [:index, :show]
+  before_action :authenticate_user! , only: [:index, :show, :destroy]
 
   def index
     @academy_applications = AcademyApplication.all.reverse_order.paginate(:page => params[:page], :per_page => 1)
@@ -22,6 +22,12 @@ class AcademyApplicationsController < ApplicationController
 
   def show
     @academy_application = AcademyApplication.find(params[:id])
+  end
+
+  def destroy
+    @academy_application = AcademyApplication.find(params[:id])
+    @academy_application.destroy
+    redirect_to '/academy_applications'
   end
 
   private

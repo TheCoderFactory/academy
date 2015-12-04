@@ -1,92 +1,97 @@
 <%= simple_form_for(@academy_application) do |f| %>
-  <h3>New Application</h3>
-  <br>
-  <div class="form-group input-field">
-    <%= f.input :one_line, label: 'Use one sentence to describe yourself', input_html: { class: 'form-control'} %>
-
-  </div>
-  <br>
-  <div class="form-group input-field">
-    <%= f.input :reason, label: 'Please tell us why you are applying for this course', input_html: { class: 'form-control materialize-textarea'} %>
-  </div>
-  <br>
-  <div class="form-group input-field">
-    <%= f.input :info, label: 'What is your background? Career, study, interests?', input_html: { class: 'form-control materialize-textarea'} %>
-  </div>
-  <br>
-  <div class="form-group input-field">
-    <%= f.input :passion, label: 'What is your main passion in life?', input_html: { class: 'form-control materialize-textarea'} %>
-  </div>
-  <br>
-  <div class="form-group input-field">
-    <%= f.input :experience, label: 'Please describe what technology you have experience with, if any.', input_html: { class: 'form-control materialize-textarea'} %>
-  </div>
-  <br>
-  <div class="form-group input-field">
-    <%= f.input :challenge, label: 'Write a couple of paragraphs about a time you faced a challenge in life and overcame it.', input_html: { class: 'form-control materialize-textarea'} %>
-  </div>
-  <br>
-  <div class="form-group input-field">
-    <%= f.input :special, label: 'Why should we choose you to be a student in this program?', input_html: { class: 'form-control materialize-textarea'} %>
-  </div>
-  <br>
-  <div class="form-group input-field">
-    <%= f.input :links, label: 'Please provide any links that may help us learn more about you (LinkedIn, Facebook, Twitter, blog, etc)', input_html: { class: 'form-control materialize-textarea'} %>
-  </div>
-  <br>
-  <div class="form-group input-field">
-    <%= f.input :referral, label: 'How did you hear about this programme? (max 200 characters)', input_html: { class: 'form-control materialize-textarea', length: '200' } %>
-  </div>
-  <br>
-  <h5>Personal information</h5>
-  <br>
-  <div class="row">
-    <div class="form-group col s6 input-field">
-      <%= f.input :first_name, input_html: { class: 'form-control' } %>
-    </div>
-    <div class="form-group col s6 input-field">
-      <%= f.input :last_name, input_html: { class: 'form-control' } %>
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="form-group col s6 input-field">
-      <%= f.input :city, label: 'Which city do you currently live in?', input_html: { class: 'form-control' } %>
-    </div>
-    <div class="form-group col s6 input-field">
-      <%= f.country_select :country, ['Australia', 'Belgium', 'Canada', 'Cyprus', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Hong Kong', 'Ireland', 'Italy', 'Japan', 'Malta', 'Netherlands', 'Norway', 'Sweden', 'United States', 'United Kingdom', ], input_html: { class: 'form-control' } %>
-      <label for="country">Which country do you currently live in?</label>
-    </div>
-  </div>
-  <div class="row">
-    <div>
-      <div class="card-panel orange lighten-4">
-        <strong>Visa requirements to study in Australia</strong>
-        <br>
-        If you don't have an Australian or New Zealand passport, are you able to find a visa that allows you to study in Australia for 3 - 6 months? See the <a href="http://www.immi.gov.au/" target="_blank" title="Australian Immigration website">Australian Immigration website</a> for more information. Many countries have a working holiday visa programme with Australia - see Visas <a href="http://www.immi.gov.au/visas/pages/462.aspx" target="_blank" title="Visa 426">462</a> and <a href="http://www.immi.gov.au/visas/pages/417.aspx" target="_blank" title="Visa 417">417</a>.
-        <div class="boolean optional fast_track_application_visa"><label>I understand that I may need a visa to study this programme in Australia. <input name="fast_track_application[visa]" type="hidden" value="0" /><input class="boolean optional " id="fast_track_application_visa" name="fast_track_application[visa]" type="checkbox" value="1" /></label>
+  <div class="card">
+    <div class="card-content">
+      <h5>Part 1: Personal information</h5>
+      <br>
+      <div class="row">
+        <div class="form-group col s6 input-field">
+          <%= f.input :first_name, input_html: { class: 'form-control' } %>
         </div>
+        <div class="form-group col s6 input-field">
+          <%= f.input :last_name, input_html: { class: 'form-control' } %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="form-group col s6 input-field">
+          <%= f.input :city, label: 'Which city do you currently live in?', input_html: { class: 'form-control' } %>
+        </div>
+        <div class="form-group col s6 input-field">
+          <%= f.country_select :country, ['Australia', 'Belgium', 'Canada', 'Cyprus', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Hong Kong', 'Ireland', 'Italy', 'Japan', 'Malta', 'Netherlands', 'Norway', 'Sweden', 'United States', 'United Kingdom', ], input_html: { class: 'form-control' } %>
+          <label for="country">Which country do you currently live in?</label>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <div class="card-panel orange lighten-4">
+            <strong>Visa requirements to study in Australia</strong>
+            <br>
+            If you don't have an Australian or New Zealand passport, are you able to find a visa that allows you to study in Australia for 3 - 6 months? See the <a href="http://www.immi.gov.au/" target="_blank" title="Australian Immigration website">Australian Immigration website</a> for more information. Many countries have a working holiday visa programme with Australia - see Visas <a href="http://www.immi.gov.au/visas/pages/462.aspx" target="_blank" title="Visa 426">462</a> and <a href="http://www.immi.gov.au/visas/pages/417.aspx" target="_blank" title="Visa 417">417</a>.
+            <div class="boolean optional fast_track_application_visa"><label>I understand that I may need a visa to study this programme in Australia. <input name="fast_track_application[visa]" type="hidden" value="0" /><input class="boolean optional " id="fast_track_application_visa" name="fast_track_application[visa]" type="checkbox" value="1" /></label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="form-group col s6 input-field">
+          <%= f.input :age, input_html: { class: 'form-control' } %>
+        </div>
+        <div class="form-group col s6 input-field">
+          <%= f.select :gender, ['Female', 'Male', 'Neither'], input_html: { class: 'form-control'} %>
+          <label for="gender">What gender do you identify as?</label>
+        </div>
+      </div>
+      <br>
+      <div class="form-group col s12 input-field">
+        <%= f.input :email, input_html: { class: 'form-control' } %>
       </div>
     </div>
   </div>
-  <br>
-  <div class="row">
-    <div class="form-group col s6 input-field">
-      <%= f.input :age, input_html: { class: 'form-control' } %>
-    </div>
-    <div class="form-group col s6 input-field">
-      <%= f.select :gender, ['Female', 'Male', 'Neither'], input_html: { class: 'form-control'} %>
-      <label for="gender">What gender do you identify as?</label>
-    </div>
-  </div>
-  <br>
-  <div class="form-group col s12 input-field">
-    <%= f.input :email, input_html: { class: 'form-control' } %>
-  </div>
-  <div class="submit col s12">
-    <%= f.submit 'Apply', class: 'btn-large submit-button' %>
-    <br><br>
-    <p>A confirmation will be sent to you almost immediately.</p>
-  </div>
 
+  <div class="card">
+    <div class="card-content">
+      <h5>Part 2: Applicant Information</h5>
+      <div class="form-group input-field">
+        <%= f.input :one_line, label: 'Use one sentence to describe yourself', input_html: { class: 'form-control'} %>
+      </div>
+      <br>
+      <div class="form-group input-field">
+        <%= f.input :reason, label: 'Please tell us why you are applying for this course', input_html: { class: 'form-control materialize-textarea'} %>
+      </div>
+      <br>
+      <div class="form-group input-field">
+        <%= f.input :info, label: 'What is your background? Career, study, interests?', input_html: { class: 'form-control materialize-textarea'} %>
+      </div>
+      <br>
+      <div class="form-group input-field">
+        <%= f.input :passion, label: 'What is your main passion in life?', input_html: { class: 'form-control materialize-textarea'} %>
+      </div>
+      <br>
+      <div class="form-group input-field">
+        <%= f.input :experience, label: 'Please describe what technology you have experience with, if any.', input_html: { class: 'form-control materialize-textarea'} %>
+      </div>
+      <br>
+      <div class="form-group input-field">
+        <%= f.input :challenge, label: 'Write a couple of paragraphs about a time you faced a challenge in life and overcame it.', input_html: { class: 'form-control materialize-textarea'} %>
+      </div>
+      <br>
+      <div class="form-group input-field">
+        <%= f.input :special, label: 'Why should we choose you to be a student in this program?', input_html: { class: 'form-control materialize-textarea'} %>
+      </div>
+      <br>
+      <div class="form-group input-field">
+        <%= f.input :links, label: 'Please provide any links that may help us learn more about you (LinkedIn, Facebook, Twitter, blog, etc)', input_html: { class: 'form-control materialize-textarea'} %>
+      </div>
+      <br>
+      <div class="form-group input-field">
+        <%= f.input :referral, label: 'How did you hear about this programme? (max 200 characters)', input_html: { class: 'form-control materialize-textarea', length: '200' } %>
+      </div>
+      <div class="submit col s12">
+        <%= f.submit 'Apply', class: 'btn-large submit-button' %>
+        <br><br>
+        <p>A confirmation email will be sent to you almost immediately.</p>
+      </div>
+    </div>
+  </div>
 <% end %>
