@@ -41,12 +41,18 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-    © <%= Date.today.year %> Coder Factory
-    <% if current_user %>
-      <p class="grey-text text-lighten-4 right">Currently logged in as: <%= current_user.email %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "grey-text text-lighten-4") %></p>
-    <% else %>
-      <a class="grey-text text-lighten-4 right" href="/users/sign_in">Sign in</a>
-    <% end %>
+      <div class="row">
+        <div class="col m6 s12">
+          © <%= Date.today.year %> Coder Factory
+        </div>
+        <div class="col m6 s12">
+          <% if current_user %>
+            <p class="grey-text text-lighten-4 right">Currently logged in as: <%= current_user.email %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "grey-text text-lighten-4") %></p>
+          <% else %>
+            <a class="grey-text text-lighten-4 right" href="/users/sign_in">Sign in</a>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
