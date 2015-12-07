@@ -54,11 +54,12 @@ gem 'sucker_punch'
 # Devise gem
 gem 'devise'
 
-# Paperclip gem
-gem 'paperclip'
+# Upload pictures using carrierwave
+gem 'carrierwave'
+gem 'cloudinary'
 
 # Ckeditor gem
-gem 'ckeditor'
+gem 'ckeditor_rails'
 
 # Paginate gems
 gem 'will_paginate-materialize'

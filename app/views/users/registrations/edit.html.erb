@@ -14,6 +14,7 @@
             <div class="form-group input-field">
               <%= f.input :last_name, required: true, autofocus: true %>
             </div>
+            <%= image_tag @user.image_url() %>
             <div class="#">
               <div class="file-field input-field gallery_picture">
                 <div class="row">

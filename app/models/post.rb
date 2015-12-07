@@ -1,11 +1,9 @@
 class Post < ActiveRecord::Base
   belongs_to :user
 
-  validates :title, :lead, :content, :published_date, presence: true
+  mount_uploader :image, ImageUploader
 
-  has_attached_file :image
-  validates_attachment_presence :image, :message => "No image"
-  validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  validates :title, :lead, :content, :published_date, presence: true
 
   def self.published_in_reverse_chron_order
     reverse_chron_order.where(publish: true)

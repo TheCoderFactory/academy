@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.text :lead
       t.text :content
-      t.attachment :image
+      t.string :image
       t.boolean :publish
       t.date   :published_date
 
