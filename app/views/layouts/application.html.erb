@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<header>
   <title><%= content_for?(:title) ? yield(:title) : 'Board the Fast Track to an exciting career in tech @ Coder Factory Academy' %></title>
   <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "See our new improved programmes that help you become a confident coder. Apply for our full time Fast track programme, part time courses and weekend workshops." %>">
   <meta charset="utf-8">
@@ -25,8 +25,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-</head>
-<body>
+</header>
+<main>
 <%= render 'layouts/full_navbar' %>
 <div>
   <%= yield %>
@@ -55,7 +55,7 @@
   </script>
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52ee398713b80ae1" async="async"></script>
-</body>
+</main>
 <footer class="page-footer">
 <%= render 'layouts/footer' %>
 </footer>
