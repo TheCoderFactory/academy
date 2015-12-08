@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get "privacy"       => "pages#privacy"
   get "community"     => "pages#community"
   get "confirmation"  => "pages#confirmation"
+  get 'vet-fee-help'  => "pages#vet_fee_help"
 
   get "blog"          => "blog#index"
 

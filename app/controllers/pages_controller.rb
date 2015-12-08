@@ -21,4 +21,7 @@ class PagesController < ApplicationController
 
   def community
   end
+
+  def vet_fee_help
+  end
 end
