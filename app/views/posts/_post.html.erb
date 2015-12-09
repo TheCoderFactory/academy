@@ -3,9 +3,7 @@
   <div class="card z-depth-3">
     <div class="card-image">
       <%= link_to post_path(post) do %>
-        <% if !post.image.nil? %>
-            <%= image_tag post.image_url() %>
-        <% end %>
+        <%= image_tag post.image_url() %>
       <% end %>
     </div>
     <div class="card-content blog-post">
