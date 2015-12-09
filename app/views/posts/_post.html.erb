@@ -3,7 +3,7 @@
   <div class="card z-depth-3">
     <div class="card-image">
       <%= link_to post_path(post) do %>
-        <% if post.image.file? %>
+        <% if post.image %>
           <%= image_tag(post.image) %>
         <% end %>
       <% end %>
