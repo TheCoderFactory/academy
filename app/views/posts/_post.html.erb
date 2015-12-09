@@ -3,16 +3,16 @@
   <div class="card z-depth-3">
     <div class="card-image">
       <%= link_to post_path(post) do %>
-        <% if post.image %>
-          <%= image_tag(post.image) %>
+        <% if post.image.nil? %>
+            <%= image_tag post.image_url() %>
         <% end %>
       <% end %>
     </div>
     <div class="card-content blog-post">
       <%= link_to post_path(post) do %><h1><span class="card-title grey-text text-darken-2"><%= post.title %></span></h1><% end %>
       <div class="chip">
-        <% if post.user.image %>
-          <img src="<%= asset_path post.user.image %>" alt="<%= post.user.first_name if post.user %>">
+        <% if post.user.image.nil? %>
+          <%= image_tag post.user.image_url() %>
         <% else %>
           <i class="fa fa-user"></i>
         <% end%>
