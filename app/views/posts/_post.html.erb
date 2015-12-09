@@ -9,7 +9,7 @@
     <div class="card-content blog-post">
       <%= link_to post_path(post) do %><h1><span class="card-title grey-text text-darken-2"><%= post.title %></span></h1><% end %>
       <div class="chip">
-        <% if post.user.image.nil? %>
+        <% if true %>
           <i class="fa fa-user"></i>
         <% else %>
           <%= image_tag post.user.image_url() %>
