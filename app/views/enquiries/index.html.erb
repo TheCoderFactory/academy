@@ -19,7 +19,7 @@
                 <% @enquiries.each do |e| %>
                   <tr>
                     <td><%= e.first_name %> <%= e.last_name %></td>
-                    <td><%= e.type %></td>
+                    <td><%= e.enqiury_type %></td>
                     <td><%= e.created_at.strftime('%d %B %Y')  %></td>
                     <td><%= link_to '<i class="fa fa-eye"></i> View'.html_safe, e %></td>
                     <td><%= link_to '<i class="fa fa-trash-o"></i> Delete'.html_safe, e, method: :delete, data: { confirm: 'Are you sure?' } %></td>
