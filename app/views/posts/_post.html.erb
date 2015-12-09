@@ -11,7 +11,7 @@
     <div class="card-content blog-post">
       <%= link_to post_path(post) do %><h1><span class="card-title grey-text text-darken-2"><%= post.title %></span></h1><% end %>
       <div class="chip">
-        <% if post.user.image.file? %>
+        <% if post.user.image %>
           <img src="<%= asset_path post.user.image %>" alt="<%= post.user.first_name if post.user %>">
         <% else %>
           <i class="fa fa-user"></i>
