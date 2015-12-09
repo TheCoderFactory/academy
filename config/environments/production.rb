@@ -73,19 +73,19 @@ Rails.application.configure do
 
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.perform_deliveries = true
-  # config.action_mailer.raise_delivery_errors = false
-  # config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
 
-  # config.action_mailer.smtp_settings = {
-    # :port           => 587,
-    # :address        => 'smtp.mailgun.org',
-    # :user_name      => 'postmaster@coderfactory.com',
-    # :password       => ENV['MAILGUN_PASSWORD'],
-    # :domain         => 'coderfactory.com',
-    # :authentication => :plain
-  # }
+  config.action_mailer.smtp_settings = {
+    :port           => 587,
+    :address        => 'smtp.mailgun.org',
+    :user_name      => 'postmaster@coderfactory.com',
+    :password       => ENV['MAILGUN_PASSWORD'],
+    :domain         => 'coderfactory.com',
+    :authentication => :plain
+  }
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new

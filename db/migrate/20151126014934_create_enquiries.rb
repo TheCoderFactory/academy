@@ -5,7 +5,6 @@ class CreateEnquiries < ActiveRecord::Migration
       t.string :last_name
       t.string :phone
       t.string :email
-      t.string :type
       t.text :message
 
       t.timestamps null: false
