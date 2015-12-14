@@ -1,45 +1,86 @@
 <%= content_for :title, 'Meet our Team' %>
 <%= content_for :description, 'Meet our team here at Coderfacotry.' %>
 <div class="container">
-  <center><h2>The Coder Factory Academy Executive Team</h2></center>
+  <h2>Our Executive Team</h2>
 
-<div class="row">
-  <div class="col s12 m4">
-    <div class="card">
-      <div class="card-image">
-        <img src="<%= asset_path 'pete.jpg' %>">
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%= asset_path 'pete.jpg' %>">
+        </div>
+        <div class="card-content">
+          <span class="card-title light-blue-text">Pete Argent</span>
+          <p>Academic Director</p>
+          <p><a href="https://www.linkedin.com/in/peterargent" target="_blank">Connect with me on LinkedIn</a></p>
+        </div>
       </div>
-      <div class="card-content">
-        <span class="card-title light-blue-text">Pete Argent</span>
-        <p>Executive Director</p>
-        <p><a href="https://www.linkedin.com/in/peterargent" target="_blank">Connect with me on LinkedIn</a></p>
+    </div>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%= asset_path 'raman.jpg' %>">
+        </div>
+        <div class="card-content">
+          <span class="card-title light-blue-text">Raman Nambiar</span>
+          <p>Managing Director</p>
+          <p><%= link_to 'Get in touch with me', "/enquire" %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card responsive">
+        <div class="card-image">
+          <img src="<%= asset_path 'gabriel.jpg' %>">
+        </div>
+        <div class="card-content">
+          <span class="card-title light-blue-text">Gabriel Providel</span>
+          <p>General Manager of AIT</p>
+          <p><a href="http://www.ait.nsw.edu.au/contact-ait/">Get in touch</a></p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col s12 m4">
-    <div class="card">
-      <div class="card-image">
-        <img src="<%= asset_path 'raman.jpg' %>">
+
+  <h2>Our Teaching Team</h2>
+
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%= asset_path 'pete.jpg' %>">
+        </div>
+        <div class="card-content">
+          <span class="card-title light-blue-text">Pete Argent</span>
+          <p>Teacher</p>
+          <p><a href="https://www.linkedin.com/in/peterargent" target="_blank">Connect with me on LinkedIn</a></p>
+        </div>
       </div>
-      <div class="card-content">
-        <span class="card-title light-blue-text">Raman Nambiar</span>
-        <p>Management Director</p>
-        <p><%= link_to 'Get in touch with me', "/enquire" %></p>
+    </div>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%= asset_path 'alex.jpg' %>">
+        </div>
+        <div class="card-content">
+          <span class="card-title light-blue-text">Alex Girard</span>
+          <p>Teacher</p>
+          <p><%= link_to 'Get in touch with me', "/enquire" %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card responsive">
+        <div class="card-image">
+          <img src="<%= asset_path 'jordan.jpg' %>">
+        </div>
+        <div class="card-content">
+          <span class="card-title light-blue-text">Jordan Hart</span>
+          <p>Teacher</p>
+          <p><a href="">Get in touch</a></p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col s12 m4">
-    <div class="card responsive">
-      <div class="card-image">
-        <img src="<%= asset_path 'gabriel.jpg' %>">
-      </div>
-      <div class="card-content">
-        <span class="card-title light-blue-text">Gabriel Providel</span>
-        <p>General Manager of AIT</p>
-        <p><a href="http://www.ait.nsw.edu.au/contact-ait/">Get in touch</a></p>
-      </div>
-    </div>
-  </div>
-</div>
 
 </div>
