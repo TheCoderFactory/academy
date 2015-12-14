@@ -1,0 +1,30 @@
+<%= content_for :title, @press_post.title + ' [@CoderFactory Blog]' %>
+<%= content_for :description, @press_post.title + ': ' + @press_post.lead %>
+<%= content_for :image, @press_post.image %>
+<%= content_for :tagline, @press_post.published_date.strftime('%d %B %Y') %>
+
+<section id="top-section">
+  <div class="container">
+    <div class="row">
+      <div class="col m12">
+        <div class="card">
+          <div class="card-image">
+            <%= image_tag @press_post.image_url() %>
+          </div>
+          <div class="card-content blog-press_post">
+            <%= link_to press_post_path(@press_post) do %><h1><span class="card-title grey-text text-darken-2"><%= @press_post.title %></span></h1><% end %>
+            <div class="chip">
+              <%= @press_post.published_date.strftime('%d %B %Y') %>
+            </div>
+            <hr>
+            <p class="flow-text"><%= @press_post.lead %></p>
+
+            <div class="flow-text">
+              <%= @press_post.content.html_safe %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

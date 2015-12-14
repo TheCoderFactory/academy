@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151208235515) do
+ActiveRecord::Schema.define(version: 20151214022226) do
 
   create_table "academy_applications", force: :cascade do |t|
     t.string   "first_name"
@@ -57,6 +57,17 @@ ActiveRecord::Schema.define(version: 20151208235515) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "image"
+  end
+
+  create_table "press_posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "lead"
+    t.text     "content"
+    t.string   "image"
+    t.boolean  "publish"
+    t.date     "published_date"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|

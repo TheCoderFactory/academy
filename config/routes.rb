@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   resources :posts
 
+  resources :press_posts
+
   get "faq"           => "pages#faq"
   get "curriculum"    => "pages#curriculum"
   get "about"         => "pages#about"
@@ -28,6 +30,7 @@ Rails.application.routes.draw do
   get 'vet-fee-help'  => "pages#vet_fee_help"
 
   get "blog"          => "blog#index"
+  get "press"         => "press#index"
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
