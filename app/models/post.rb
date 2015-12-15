@@ -5,8 +5,9 @@ class Post < ActiveRecord::Base
 
   validates :title, :lead, :content, :published_date, presence: true
 
+
   def self.current_articles
-    reverse_chron_order.where("published_date <= ?", Date.today)
+    published_in_reverse_chron_order.where("published_date <= ?", Date.today)
   end
 
   def self.published_in_reverse_chron_order
