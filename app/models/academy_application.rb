@@ -4,7 +4,7 @@ class AcademyApplication < ActiveRecord::Base
   validates :city, presence: true
   validates :email, presence: true, :format => EMAIL_REGEX
   validates :age, presence: true
-  validates :one_line, :reason, :info, :passion, :experience, :challenge, :special, :links, :referral, presence: true
+  validates :one_line, :reason, :info, :passion, :experience, :challenge, :special, presence: true
   validates :referral, length: { maximum: 200 }
 
   def send_emails
