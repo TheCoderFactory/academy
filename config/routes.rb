@@ -20,14 +20,15 @@ Rails.application.routes.draw do
   resources :press_posts
   resources :newsletter_users
 
-  get "faq"           => "pages#faq"
-  get "curriculum"    => "pages#curriculum"
-  get "about"         => "pages#about"
-  get "contact"       => "pages#contact"
-  get "privacy"       => "pages#privacy"
-  get "community"     => "pages#community"
-  get "confirmation"  => "pages#confirmation"
-  get 'vet-fee-help'  => "pages#vet_fee_help"
+  get "faq"                       => "pages#faq"
+  get "curriculum"                => "pages#curriculum"
+  get "about"                     => "pages#about"
+  get "contact"                   => "pages#contact"
+  get "privacy"                   => "pages#privacy"
+  get "community"                 => "pages#community"
+  get "confirmation"              => "pages#confirmation"
+  get 'vet-fee-help'              => "pages#vet_fee_help"
+  get 'women-in-tech-scholarship' => "pages#scholarship"
 
   get "blog"          => "blog#index"
   get "press"         => "press#index"

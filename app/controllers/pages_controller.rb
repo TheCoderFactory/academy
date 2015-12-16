@@ -24,4 +24,7 @@ class PagesController < ApplicationController
 
   def vet_fee_help
   end
+
+  def scholarship
+  end
 end
