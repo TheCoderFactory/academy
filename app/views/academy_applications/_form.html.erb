@@ -32,8 +32,13 @@
         </div>
       </div>
       <br>
-      <div class="form-group col s12 input-field">
-        <%= f.input :email, input_html: { class: 'form-control' } %>
+      <div class="row">
+        <div class="form-group col s5 input-field">
+          <%= f.input :phone, input_html: { class: 'form-control' } %>
+        </div>
+        <div class="form-group col s7 input-field">
+          <%= f.input :email, input_html: { class: 'form-control' } %>
+        </div>
       </div>
     </div>
   </div>
