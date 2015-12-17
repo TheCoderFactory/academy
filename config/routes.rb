@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   get "community"                 => "pages#community"
   get "confirmation"              => "pages#confirmation"
   get 'vet-fee-help'              => "pages#vet_fee_help"
+  get 'partners'                  => "pages#partners"
 
   get "blog"          => "blog#index"
   get "press"         => "press#index"

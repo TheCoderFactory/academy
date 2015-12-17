@@ -27,4 +27,7 @@ class PagesController < ApplicationController
 
   def scholarship
   end
+
+  def partners
+  end
 end
