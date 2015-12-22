@@ -7,9 +7,32 @@
         <div class="row center">
           <h5 class="header col s12 light" id="apply-text">Your Fast Track to a career in tech.</h5>
         </div>
+        <a class="modal-trigger" href="#modal1"><button class="btn btn-large info-session-button">REGISTER FOR AN INFO SESSION!</button></a>
       </center>
     </div>
   </div>
   </div>
 </div>
 <div id="video" class="player" data-property="{videoURL: '<%= @video_code %>',containment:'#customElement', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'highres'}"></div>
+
+
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <div class="row">
+      <div class="col s12">
+        <h4>Join an info session!</h4>
+        <p>At our info sessions you'll get a taste of what to expect in our Fast Track course as well as have the chance to ask us questions.</p>
+      </div>
+      <%= render "info_session_attendees/attendee_form" %>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect btn-flat">Close</a>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  $('.modal-trigger').leanModal();
+});
+</script>  

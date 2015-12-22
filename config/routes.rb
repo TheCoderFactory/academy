@@ -17,8 +17,9 @@ Rails.application.routes.draw do
   get "enquire"       => "enquiries#new"
 
   resources :posts
-  resources :press_posts
-  resources :newsletter_users
+  resources :info_session_attendees
+  resources :info_session_dates
+  get "information_sessions"   => "info_session_dates#index"
 
   get "faq"                       => "pages#faq"
   get "curriculum"                => "pages#curriculum"

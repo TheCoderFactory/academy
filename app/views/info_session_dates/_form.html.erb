@@ -1,0 +1,20 @@
+<%= simple_form_for(@new_info_session) do |f| %>
+  <%= f.error_notification %>
+  <div class="form-inputs">
+    <div>
+      <label for="published_date">Session Date</label>
+      <%= f.text_field :session_date, class: "datepicker", placeholder: "Select a session date. Can't be empty." %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-large submit-button" %>
+  </div>
+<% end %>
+
+<script>
+$('.datepicker').pickadate({
+  selectMonths: true, // Creates a dropdown to control month
+  selectYears: 15 // Creates a dropdown of 15 years to control year
+});
+</script>
