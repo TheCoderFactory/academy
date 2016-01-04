@@ -8,7 +8,8 @@
 
           <h4 class="header col s12 light" id="apply-text">Your Fast Track to a career in tech.</h4>
         </div>
-        <a class="modal-trigger btn-large info-session-button white-text waves-effect waves-light " href="#modal1"><i class="material-icons left">schedule</i> REGISTER FOR A Free workshop</a>
+        <a class="modal-trigger btn-large info-session-button white-text waves-effect waves-light " href="#modal1"><i class="material-icons left">schedule</i> REGISTER FOR AN INFO SESSION</a>
+        <a class="modal-trigger btn-large info-session-button white-text waves-effect waves-light " href="#modal2"><i class="material-icons left">schedule</i> REGISTER FOR A FREE WORKSHOP</a>
       </center>
     </div>
   </div>
@@ -21,12 +22,29 @@
   <div class="modal-content">
     <div class="row">
       <div class="col s12">
+        <h5><i class="fa fa-edit"></i> Register for an info session</h5>
+        <p>Come learn all about our new accredited coding bootcamp course and what you'll need to succeed in the software industry.</p>
+        <p>When: 6pm - 8pm, Wednesday evenings<br>
+        Where: Coder Factory HQ, 7 Hudson St, Redfern<br>
+        What to bring: Your laptop and excitement for technology!</p>
+        <%= render "info_session_attendees/info_session_attendee_form" %>
+      </div>
+    </div>
+  </div>
+<!--   <div class="modal-footer">
+    
+  </div> -->
+</div>
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <div class="row">
+      <div class="col s12">
         <h5><i class="fa fa-edit"></i> Register for a free workshop</h5>
         <p>Get started coding at a Coder Factory workshop. See the campus, meet some of the team and get your hands in some code.</p>
         <p>When: 6pm - 8pm, Wednesday evenings<br>
         Where: Coder Factory HQ, 7 Hudson St, Redfern<br>
         What to bring: Your laptop and excitement for technology!</p>
-        <%= render "info_session_attendees/attendee_form" %>
+        <%= render "info_session_attendees/workshop_attendee_form" %>
         
       </div>
     </div>

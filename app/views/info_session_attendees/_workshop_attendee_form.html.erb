@@ -1,0 +1,35 @@
+<% if @info_session_dates.empty? %>
+  <h3>There are currently no scheduled info sessions. Please check back later for more.</h3>
+<% else %>
+  <%= simple_form_for(@info_session_attendee) do |f| %>
+    <%= f.error_notification %>
+    <div class="row">
+      <div class="form-group input-field col s12">
+
+        <%= f.select :session_date, options_for_select(@info_session_dates), input_html: { class: 'form-control'}, prompt: 'Select a session date:' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group input-field col s2">
+        <%= f.input :first_name, label: "First Name", input_html: {class: "form-control"} %>
+      </div>
+      <div class="form-group input-field col s2">
+        <%= f.input :last_name, label: "Last Name", input_html: {class: "form-control"} %>
+      </div>
+      <div class="form-group input-field col s3">
+        <%= f.input :phone, label: "Phone", input_html: {class: "form-control"} %>
+      </div>
+      <div class="form-group input-field col s5">
+        <%= f.input :email, label: "Email Address", input_html: {class: "form-controli"} %>
+      </div>
+    </div>
+    <%= f.hidden_field :session_type, :value => "Free Workshop"%>
+
+    <div class="row">
+      <div class="col s12">
+        <%= f.button :submit, "Register", class: "orange white-text btn-large submit-button" %>
+        <a href="#" class="right modal-action modal-close waves-effect btn-flat">Close</a>
+      </div>
+    </div>
+  <% end %>
+<% end %>

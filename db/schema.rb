@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160103235940) do
+ActiveRecord::Schema.define(version: 20160104004619) do
 
   create_table "academy_applications", force: :cascade do |t|
     t.string   "first_name"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20160103235940) do
     t.integer  "info_session_date_id"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.string   "session_type"
   end
 
   create_table "info_session_dates", force: :cascade do |t|
