@@ -3,6 +3,9 @@ class Post < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
+  extend FriendlyId
+    friendly_id :title, use: :slugged
+
   validates :title, :lead, :content, :published_date, presence: true
 
 

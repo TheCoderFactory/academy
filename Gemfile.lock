@@ -81,6 +81,8 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.6.0)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     http-cookie (1.0.2)
@@ -215,6 +217,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   country_select
   devise
+  friendly_id
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
