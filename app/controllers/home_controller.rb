@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     @info_sessions = InfoSessionDate.all
     @info_session_dates = Array.new
     @info_sessions.each do |session|
-      @info_session_dates << session.session_date
+      @info_session_dates << session.session_date.strftime('%d %B %Y')
     end
   end
 end

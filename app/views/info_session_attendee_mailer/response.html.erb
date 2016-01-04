@@ -4,36 +4,23 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>Info Session registration received.</h1>
+    
 
     <p>
-    You have received a new application from: <%= @attendee.first_name %> <%= @attendee.last_name %>
+    
+    Hi <%= @attendee.first_name %>
     </p>
 
-    <p>
-    <strong>First name:</strong>
-    <%= @attendee.first_name %>
-    </p>
+    <p>Thanks for registering for the free workshop and info session at Coder Factory Academy.</p>
+
+    <p>Here are the details:</p>
 
     <p>
-    <strong>Last name:</strong>
-    <%= @attendee.last_name %>
-    </p>
-
-    <p>
-    <strong>Email:</strong>
-    <%= @attendee.email %>
-    </p>
-
-    <p>
-    <strong>Phone:</strong>
-    <%= @attendee.phone %>
-    </p>
-
-    <p>
-    <strong>Date:</strong>
+    <strong>Your selected session date:</strong>
     <%= @attendee.session_date %>
     </p>
+    <p><strong>Time: </strong>6pm - 8pm</p>
+    <p><strong>What to bring:</strong> Your laptop and excitement for technology.</p>
 
     <p>
     <strong>Where:</strong>
