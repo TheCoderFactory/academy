@@ -1,33 +1,36 @@
 class PagesController < ApplicationController
-  def faq
-  end
-
-  def curriculum
-  end
-
   def about
   end
 
-  def contact
-    @enquiry = Enquiry.new
+  def community
   end
 
   def confirmation
     @type = params[:type]
   end
 
+  def contact
+    @enquiry = Enquiry.new
+  end
+
+  def curriculum
+  end
+
+  def faq
+  end
+
+  def partners
+  end
+
   def privacy
-  end
-
-  def community
-  end
-
-  def vet_fee_help
   end
 
   def scholarship
   end
 
-  def partners
+  # def testimonials
+  # end
+
+  def vet_fee_help
   end
 end
