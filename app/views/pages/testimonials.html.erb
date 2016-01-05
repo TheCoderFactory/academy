@@ -7,31 +7,123 @@
     </div>
   </div>
   <hr>
-  <a class="modal-trigger btn-large info-session-button white-text waves-effect waves-light " href="#modal1">
-  <div class="col s1">
-    <img src="<%= asset_path 'VideoScreenshot' %>" class="responsive-img circle">
-  </div>
-  <div class="col s11">Quoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooote</div>
+  <a class="modal-trigger" href="#modalAnna">
+    <div class="card-panel black-text hoverable">
+      <div class="row valign-wrapper">
+        <div class="col s2">
+          <center>
+            <i class="fa fa-expand fa-5x"></i>
+          </center>
+        </div>
+        <div class="col s8">
+          <p>You will just learn so fast and be able to build something in your first lesson!</p>
+          <h5>Anna Robson, Coder & Sports Coach</h5>
+        </div>
+        <div class="col s2">
+          <img src="<%= asset_path 'testimonials/AnnaCrop.jpg' %>" class="responsive-img circle">
+        </div>
+      </div>
+    </div>
+  </a>
+  <a class="modal-trigger" href="#modalAttila">
+    <div class="card-panel black-text">
+      <div class="row valign-wrapper">
+        <div class="col s2">
+          <center>
+            <i class="fa fa-expand fa-5x"></i>
+          </center>
+        </div>
+        <div class="col s8">
+          <p>It’s not that hard to learn and develop a web application with Ruby on Rails.</p>
+          <h5>Attila Zimler, Coder & Software Developer</h5>
+        </div>
+        <div class="col s2">
+          <img src="<%= asset_path 'testimonials/AttilaCrop.jpg' %>" class="responsive-img circle">
+        </div>
+      </div>
+    </div>
+  </a>
+  <a class="modal-trigger" href="#modalDaniel">
+    <div class="card-panel black-text">
+      <div class="row valign-wrapper">
+        <div class="col s2">
+          <center>
+            <i class="fa fa-expand fa-5x"></i>
+          </center>
+        </div>
+        <div class="col s8">
+          <p>[Coder Factory] gives you more technical experience rather than being mudlled up in all the theories (…) students can focus on the practical skills that employers want.</p>
+          <h5>Daniel Dumycz, Coder & Artist</h5>
+        </div>
+        <div class="col s2">
+          <img src="<%= asset_path 'testimonials/DanielCrop.jpg' %>" class="responsive-img circle">
+        </div>
+      </div>
+    </div>
+  </a>
+  <a class="modal-trigger" href="#modalPeter">
+    <div class="card-panel black-text">
+      <div class="row valign-wrapper">
+        <div class="col s2">
+          <center>
+            <i class="fa fa-expand fa-5x"></i>
+          </center>
+        </div>
+        <div class="col s8">
+          <p>[The atomosphere] is very casual, very friendly (…) they have been exceptionally patient with me and determined to help me. (…) I am learning a lot, very quickly!</p>
+          <h5>Peter Hogan, Coder & Retail Professional</h5>
+        </div>
+        <div class="col s2">
+          <img src="<%= asset_path 'testimonials/PeterCrop.jpg' %>" class="responsive-img circle">
+        </div>
+      </div>
+    </div>
+  </a>
+  <a class="modal-trigger" href="#modalSam">
+    <div class="card-panel black-text">
+      <div class="row valign-wrapper">
+        <div class="col s2">
+          <center>
+            <i class="fa fa-expand fa-5x"></i>
+          </center>
+        </div>
+        <div class="col s8">
+          <p>We really enjoyed it and got a lot out of it. (…) I have changed job (…) I am now using Ruby on Rails in my new startup!</p>
+          <h5>Sam Henderson, Coder & Entrepeneur</h5>
+        </div>
+        <div class="col s2">
+          <img src="<%= asset_path 'testimonials/SamCrop.jpg' %>" class="responsive-img circle">
+        </div>
+      </div>
+    </div>
   </a>
 </div>
 </div>
 
-<%# <div class="video-container"> %>
-  <%# <iframe width="560" height="315" src="https://www.youtube.com/embed/Gl8cjgB1u_c?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> %>
-<%# </div> %>
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <div class="row">
-      <div class="col s12">
-        <h5><i class="fa fa-edit"></i> Register for an info session</h5>
-        <p>Come learn all about our new accredited coding bootcamp course and what you'll need to succeed in the software industry.</p>
-        <p>When: 6pm - 8pm, Wednesday evenings<br>
-        Where: Coder Factory HQ, 7 Hudson St, Redfern<br>
-        What to bring: Your laptop and excitement for technology!</p>
-      </div>
-    </div>
+<div id="modalAnna" class="modal">
+  <div class="video-container">
+    <iframe src="https://player.vimeo.com/video/150739950?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   </div>
-<!--   <div class="modal-footer">
-    
-  </div> -->
 </div>
+<div id="modalAttila" class="modal">
+  <div class="video-container">
+  </div>
+</div>
+<div id="modalDaniel" class="modal">
+  <div class="video-container">
+  </div>
+</div>
+<div id="modalPeter" class="modal">
+  <div class="video-container">
+  </div>
+</div>
+<div id="modalSam" class="modal">
+  <div class="video-container">
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  $('.modal-trigger').leanModal();
+});
+</script>
