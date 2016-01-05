@@ -28,8 +28,8 @@ class PagesController < ApplicationController
   def scholarship
   end
 
-  # def testimonials
-  # end
+  def testimonials
+  end
 
   def vet_fee_help
   end

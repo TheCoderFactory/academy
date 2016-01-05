@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   get "confirmation"              => "pages#confirmation"
   get 'vet-fee-help'              => "pages#vet_fee_help"
   get 'partners'                  => "pages#partners"
-  # get 'testimonials'              => "pages#testimonials"
+  get 'testimonials'              => "pages#testimonials"
 
   get "blog"          => "blog#index"
   get "press"         => "press#index"
