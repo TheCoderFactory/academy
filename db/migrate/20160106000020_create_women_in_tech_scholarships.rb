@@ -5,8 +5,8 @@ class CreateWomenInTechScholarships < ActiveRecord::Migration
       t.string :last_name
       t.string :email
       t.string :phone
-      t.string :reason
-      t.string :career
+      t.text :reason
+      t.text :career
       t.string :links
 
       t.timestamps null: false

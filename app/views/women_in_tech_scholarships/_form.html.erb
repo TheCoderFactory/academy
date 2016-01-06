@@ -1,0 +1,49 @@
+<%= simple_form_for(@women_in_tech_scholarship) do |f| %>
+  <div class="card">
+    <div class="card-content">
+      <h5>Personal Details</h5>
+      <div class="row">
+        <div class="form-group col s5 input-field">
+          <%= f.input :first_name, input_html: { class: 'form-control' } %>
+        </div>
+        <div class="form-group col s5 input-field">
+          <%= f.input :last_name, input_html: { class: 'form-control' } %>
+        </div>
+        <div class="form-group col s2 input-field">
+          <%= f.input :age, input_html: { class: 'form-control' } %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col s5 input-field">
+          <%= f.input :phone, input_html: { class: 'form-control' } %>
+        </div>
+        <div class="form-group col s7 input-field">
+          <%= f.input :email, input_html: { class: 'form-control' } %>
+        </div>
+      </div>
+      <h5>Application Information</h5>
+      <div class="form-group input-field">
+        <%= f.input :reason, label: 'Why should you receive this scholarship?', input_html: { class: 'form-control materialize-textarea'} %>
+      </div>
+      <div class="form-group input-field">
+        <%= f.input :career, label: 'What will you do in your career to help increase women in tech?', input_html: { class: 'form-control materialize-textarea'} %>
+      </div>
+      <div class="form-group input-field">
+        <%= f.input :links, label: 'Provide any links you think will help with your application.', input_html: { class: 'form-control materialize-textarea'} %>
+      </div>
+      <div class="form-group input-field">
+          <%= f.check_box :accepted_terms, id: "checkbox" %>
+          <label for="checkbox">I have read and agree to the terms and conditions.</label>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="submit col s12">
+        <%= f.submit 'Apply', class: 'light-blue white-text btn-large submit-button' %>
+        <br><br>
+        <p>A confirmation email will be sent to you almost immediately.</p>
+      </div>
+    </div>
+  </div>
+
+<% end %>
