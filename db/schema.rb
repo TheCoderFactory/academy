@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160104004619) do
+ActiveRecord::Schema.define(version: 20160106000020) do
 
   create_table "academy_applications", force: :cascade do |t|
     t.string   "first_name"
@@ -112,5 +112,17 @@ ActiveRecord::Schema.define(version: 20160104004619) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "women_in_tech_scholarships", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "reason"
+    t.string   "career"
+    t.string   "links"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

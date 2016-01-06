@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   resources :enquiries
   get "enquire"       => "enquiries#new"
 
+  resources :women_in_tech_scholarships
+
   resources :posts
   resources :info_session_attendees
   resources :info_session_dates
