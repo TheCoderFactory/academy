@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   resources :women_in_tech_scholarships
   get "women-in-tech/apply"                   => "women_in_tech_scholarships#new"
-  get "women-in-tech/scholarhip-information"  => "pages#women_in_tech_scholarship"
+  get "women-in-tech/scholarship-information"  => "pages#women_in_tech_scholarship"
 
   resources :posts
   resources :info_session_attendees
