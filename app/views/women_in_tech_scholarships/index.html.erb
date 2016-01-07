@@ -1,1 +1,46 @@
-index
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<section id="top-section">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m10 offset-m1">
+        <h1>Women In Tech</h1>
+        <h5>Scholarship Applications</h5>
+        <div class="card">
+          <div class="card-content">
+            <table>
+              <thead>
+                <tr>
+                  <th width="50%">Name</th>
+                  <th width="25%">Date Received</th>
+                  <th>Views</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @women_in_tech_scholarships.each do |app| %>
+                  <tr>
+                    <td><%= app.first_name %> <%= app.last_name %></td>
+                    <td><%= app.created_at.strftime('%d %B %Y')  %></td>
+                    <td><%= link_to '<i class="fa fa-eye"></i> View'.html_safe, app %></td>
+                    <td><%= link_to '<i class="fa fa-trash-o"></i> Delete'.html_safe, app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <% if @women_in_tech_scholarships.size == 0 %>
+              <center>
+                <h3>There are currently no scholarship applications.<br> Please check back later.</h3>
+              </center>
+            <% end %>
+          </div>
+        </div>
+        <div class="card">
+           <div class="container">
+             <center>
+               <%= will_paginate @women_in_tech_scholarships %>
+             </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

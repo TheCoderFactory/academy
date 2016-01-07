@@ -31,41 +31,18 @@ gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use simple form for forms
 gem 'simple_form'
 gem 'country_select'
-
-# Use responders gem
 gem 'responders'
-
-# Sucker_punch gem
 gem 'sucker_punch'
-
-# Devise gem
 gem 'devise'
-
-# Upload pictures using carrierwave
 gem 'carrierwave'
+gem 'carrierwave_backgrounder'
+gem 'fog'
 gem 'cloudinary'
-
-# Ckeditor gem
 gem 'ckeditor_rails'
-
-# Paginate gems
 gem 'will_paginate-materialize'
 gem 'will_paginate'
-
-# Give posts slugs
 gem 'friendly_id'
 
 group :development, :test do

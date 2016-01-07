@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Scholarship application received.</h1>
+
+    <p>
+    You have received a new application from: <%= @women_in_tech_scholarship.first_name %> <%= @women_in_tech_scholarship.last_name %>
+    </p>
+
+    <p>
+    <strong>First name:</strong>
+    <%= @women_in_tech_scholarship.first_name %>
+    </p>
+
+    <p>
+    <strong>Last name:</strong>
+    <%= @women_in_tech_scholarship.last_name %>
+    </p>
+
+    <p>
+    <strong>Email:</strong>
+    <%= @women_in_tech_scholarship.email %>
+    </p>
+
+    <p>
+    <strong>Phone:</strong>
+    <%= @women_in_tech_scholarship.phone %>
+    </p>
+
+    <p>
+    <strong>Age:</strong>
+    <%= @women_in_tech_scholarship.age %>
+    </p>
+    <p>
+    <strong>Write a couple of paragraphs about a time you faced a challenge in life and overcame it:</strong>
+    <%= @women_in_tech_scholarship.reason %>
+    </p>
+
+    <p>
+    <strong>Why should we choose you to be a student in this program?</strong>
+    <%= @women_in_tech_scholarship.career %>
+    </p>
+
+    <p>
+    <strong>Relevant links:</strong>
+    <%= @women_in_tech_scholarship.links %>
+    </p>
+
+    <p>
+    <strong>Portfolio:</strong>
+    <a href="<%= @women_in_tech_scholarship.portfolio %>" target="_blank">Click here to download</a>
+    </p>
+  </body>
+</html>

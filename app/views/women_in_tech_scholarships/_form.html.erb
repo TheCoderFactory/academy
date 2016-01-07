@@ -31,6 +31,21 @@
       <div class="form-group input-field">
         <%= f.input :links, label: 'Provide any links you think will help with your application.', input_html: { class: 'form-control materialize-textarea'} %>
       </div>
+      <div class="#">
+        <div class="file-field input-field gallery_picture">
+          <div class="row">
+            <div class="col s2">
+              <div class="btn black-text">
+                <span>Portfolio</span>
+                <%= f.file_field :portfolio %>
+              </div>
+            </div>
+            <div class="col s10">
+              <input class="file-path validate" type="text" placeholder="Upload your portfolio. All things must be placed inside a zipped folder.">
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="form-group input-field">
           <%= f.check_box :accepted_terms, id: "checkbox" %>
           <label for="checkbox">I have read and agree to the <a href="/women-in-tech/scholarship-information" target="_blank">terms and conditions.</a></label>
@@ -40,8 +55,8 @@
       <br>
       <div class="submit col s12">
         <%= f.submit 'Apply', class: 'light-blue white-text btn-large submit-button' %>
-        <br><br>
-        <p>A confirmation email will be sent to you almost immediately.</p>
+        <p>Please be patient. it may take a while to upload your portfolio. You will be redirected once it finishes</p>
+        <p>A confirmation email will be sent to you almost immediately upon redirection.</p>
       </div>
     </div>
   </div>
