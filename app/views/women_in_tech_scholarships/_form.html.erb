@@ -35,16 +35,17 @@
         <div class="file-field input-field gallery_picture">
           <div class="row">
             <div class="col s2">
-              <div class="btn black-text">
+              <div class="btn black-text btn-large submit-button">
                 <span>Portfolio</span>
-                <%= f.file_field :portfolio %>
+                <%= f.file_field :portfolio, accept: ".zip" %>
               </div>
             </div>
-            <div class="col s10">
-              <input class="file-path validate" type="text" placeholder="Upload your portfolio. All things must be placed inside a zipped folder.">
+            <div class="col l10 s9 offset-s1">
+              <input class="file-path validate" type="text" placeholder="Upload your portfolio.">
             </div>
           </div>
         </div>
+        <p>Please upload your portfolio as a zipped folder containing everything you wish to submit.</p>
       </div>
       <div class="form-group input-field">
           <%= f.check_box :accepted_terms, id: "checkbox" %>
@@ -54,7 +55,7 @@
       <br>
       <br>
       <div class="submit col s12">
-        <%= f.submit 'Apply', class: 'light-blue white-text btn-large submit-button' %>
+        <%= f.submit 'Apply', class: 'btn-large submit-button' %>
         <p>Please be patient. it may take a while to upload your portfolio. You will be redirected once it finishes</p>
         <p>A confirmation email will be sent to you almost immediately upon redirection.</p>
       </div>
