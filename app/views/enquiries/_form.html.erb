@@ -18,7 +18,8 @@
     </div>
   </div>
   <div class="form-group input-field">
-    <%= f.select :enquiry_type, options_for_select(['Select your enquiry type.', 'Academy Enquiry', 'General Enquiry', 'Partnership Enquiry', 'Website Problem'], :disabled => 'Select your enquiry type.', :selected => 'Select your enquiry type.'), input_html: { class: 'form-control'} %>
+    <label for="enquiry_type">You are:</label><br><br>
+    <%= f.select :enquiry_type, options_for_select(['A High School Student in Asutralia', 'No Longer at High School', 'An Education Agent', 'A Teacher or Careers Adviser', 'An Industry Contact', 'Parent of a Potential Student']), input_html: { class: 'form-control'} %>
   </div>
   <div class="form-group input-field">
     <%= f.input :message, label: "Enquiry", input_html: {class: "form-control materialize-textarea"} %>
