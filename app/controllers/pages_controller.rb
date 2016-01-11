@@ -19,6 +19,9 @@ class PagesController < ApplicationController
   def faq
   end
 
+  def instructors
+  end
+
   def partners
   end
 

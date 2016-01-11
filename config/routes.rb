@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get "faq"                       => "pages#faq"
   get "curriculum"                => "pages#curriculum"
   get "about"                     => "pages#about"
+  get "about/instructors"         => "pages#instructors"
   get "contact"                   => "pages#contact"
   get "privacy"                   => "pages#privacy"
   get "community"                 => "pages#community"
