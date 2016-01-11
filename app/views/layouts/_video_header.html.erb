@@ -8,9 +8,9 @@
 
           <h4 class="header col s12 light" id="apply-text">Your Fast Track to a career in tech.</h4>
         </div>
-        <a class="modal-trigger btn-large info-session-button white-text waves-effect waves-light " href="#modal1"><i class="material-icons left">schedule</i> ATTEND AN INFO SESSION</a>
+        <a class="modal-trigger btn-large info-session-button white-text waves-effect waves-light " href="#infoModal"><i class="material-icons left">schedule</i> ATTEND AN INFO SESSION</a>
         <div class="hide-on-large-only"><br></div>
-        <a class="modal-trigger btn-large info-session-button white-text waves-effect waves-light " href="#modal2"><i class="material-icons left">schedule</i> REGISTER FOR A FREE WORKSHOP</a>
+        <a class="modal-trigger btn-large info-session-button white-text waves-effect waves-light " href="#workshopModal"><i class="material-icons left">schedule</i> REGISTER FOR A FREE WORKSHOP</a>
       </center>
     </div>
   </div>
@@ -19,7 +19,7 @@
 <div id="video" class="player" data-property="{videoURL: '<%= @video_code %>',containment:'#customElement', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'highres'}"></div>
 
 
-<div id="modal1" class="modal">
+<div id="infoModal" class="modal">
   <div class="modal-content">
     <div class="row">
       <div class="col s12">
@@ -32,11 +32,8 @@
       </div>
     </div>
   </div>
-<!--   <div class="modal-footer">
-    
-  </div> -->
 </div>
-<div id="modal2" class="modal">
+<div id="workshopModal" class="modal">
   <div class="modal-content">
     <div class="row">
       <div class="col s12">
@@ -50,13 +47,10 @@
       </div>
     </div>
   </div>
-<!--   <div class="modal-footer">
-    
-  </div> -->
 </div>
 <script>
 $(document).ready(function(){
   // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
   $('.modal-trigger').leanModal();
 });
-</script>  
+</script>
