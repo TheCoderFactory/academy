@@ -1,4 +1,6 @@
 class InfoSessionAttendeesController < ApplicationController
+  before_action :authenticate_user! , only: [:destroy]
+
   def create
     @info_session_attendee = InfoSessionAttendee.new(info_session_attendee_params)
     @info_session_attendee.info_session_date = InfoSessionDate.where(session_date: info_session_attendee_params[:session_date]).first

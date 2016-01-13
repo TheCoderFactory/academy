@@ -1,4 +1,6 @@
 class WomenInTechScholarshipsController < ApplicationController
+  before_action :authenticate_user! , only: [:index, :show, :destroy]
+
   def index
     @women_in_tech_scholarships = WomenInTechScholarship.all.reverse_order.paginate(:page => params[:page], :per_page => 10)
   end
