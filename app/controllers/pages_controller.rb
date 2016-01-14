@@ -37,6 +37,9 @@ class PagesController < ApplicationController
   def vet_fee_help
   end
 
+  # def video_archive
+  # end
+
   def women_in_tech_scholarship
   end
 end
