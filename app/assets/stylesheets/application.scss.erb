@@ -42,6 +42,9 @@ section {
 strong {
   font-weight: bold;
 }
+.down {
+  padding-top: 10px;
+}
 .btn, .btn-large{
   text-decoration: none;
   color: #fff;
@@ -66,7 +69,10 @@ strong {
   -webkit-tap-highlight-color: transparent;
 }
 .hero-button {
-  width: 350px;
+  width: 100%;
+  <%# white-space: normal !important; %>
+  <%# word-wrap: break-word !important; %>
+  <%# word-break: normal !important; %>
 }
 .vertical {
   position: relative;
@@ -271,7 +277,6 @@ nav {
   margin-top: -110px;
   color: rgba(255,255,255,0.8);
   padding-top: 10%;
-  /*background-image: url(<%= @video_background %>); */
 }
 .top-bar, .top-bar a {
   color: white;
