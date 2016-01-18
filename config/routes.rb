@@ -20,6 +20,10 @@ Rails.application.routes.draw do
 
   resources :posts
 
+  resources :workshop_attendees
+  resources :workshop_dates
+  get "workshop_sessions"     =>  "workshop_dates#index"
+
   resources :info_session_attendees
   resources :info_session_dates
   get "information_sessions"   => "info_session_dates#index"

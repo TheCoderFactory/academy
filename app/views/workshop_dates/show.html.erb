@@ -1,0 +1,48 @@
+<section id="top-section">
+<div class="container">
+  <div class="row">
+    <div class="col m12">
+      <h2>Workshop Sessions</h2>
+      <div class="card">
+        <div class="card-content">
+          <h3><%= @workshop_date.session_date %></h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th width="20%">Name</th>
+                <th width="20%">Phone</th>
+                <th width="20%">Email</th>
+                <th width="20%">Session Type</th>
+                <th>Views</th>
+                <th colspan="2"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @workshop_date_attendees.each do |attendee| %>
+                <tr>
+                  <td><%= attendee.first_name %> <%= attendee.last_name %></td>
+                  <td><%= attendee.phone %></td>
+                  <td><%= attendee.email %></td>
+                  <td><%= attendee.session_type %></td>
+                  <td><%= link_to '<i class="fa fa-trash-o"></i> Delete'.html_safe, attendee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <% if @workshop_date_attendees.size == 0 %>
+            <center>
+              <h3>There are currently no attendees.</h3>
+            </center>
+          <% end %>
+        </div>
+      </div>
+      <div class="card">
+        <center>
+          <%= will_paginate @workshop_date_attendees %>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
