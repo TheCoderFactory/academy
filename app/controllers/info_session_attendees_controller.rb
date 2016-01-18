@@ -20,6 +20,6 @@ class InfoSessionAttendeesController < ApplicationController
 
   private
   def info_session_attendee_params
-    params.require(:info_session_attendee).permit(:first_name, :last_name, :phone, :email, :session_date, :session_type)
+    params.require(:info_session_attendee).permit(:first_name, :last_name, :phone, :email, :session_date)
   end
 end
