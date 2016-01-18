@@ -10,11 +10,11 @@
             <h4 class="header col s12 light" id="apply-text">Australia's only accredited coding bootcamp</h4>
           </div>
           <div class="col l4 offset-l2 m12 s12">
-            <a class="modal-trigger btn-large info-session-button black-text waves-effect waves-light hero-button" href="#infoModal"><i class="material-icons left">schedule</i> ATTEND AN INFO SESSION</a>
+            <a class="modal-trigger btn-large info-session-button black-text waves-effect waves-light hero-button" href="information-sessions/new"><i class="material-icons left">schedule</i> ATTEND AN INFO SESSION</a>
           </div>
           <div class="hide-on-large-only"><br><br><br></div>
           <div class="col l4 m12 s12">
-            <a class="modal-trigger btn-large info-session-button black-text waves-effect waves-light hero-button" href="#workshopModal"><i class="material-icons left">schedule</i> JOIN A FREE WORKSHOP</a>
+            <a class="modal-trigger btn-large info-session-button black-text waves-effect waves-light hero-button" href="workshop-sessions/new"><i class="material-icons left">schedule</i> JOIN A FREE WORKSHOP</a>
           </div>
         </div>
       </center>
@@ -23,45 +23,3 @@
   </div>
 </div>
 <div id="video" class="player" data-property="{videoURL: '<%= @video_code %>',containment:'#customElement', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'highres'}"></div>
-
-
-<div id="infoModal" class="modal modal-fixed-footer">
-  <div class="modal-content">
-    <div class="row">
-      <div class="col s12">
-        <h5><i class="fa fa-edit"></i> Register for an info session</h5>
-        <p>Come learn all about our new accredited coding bootcamp course and what you'll need to succeed in the software industry.</p>
-        <p>When: 6pm - 8pm, Wednesday evenings<br>
-        Where: Coder Factory HQ, 7 Hudson St, Redfern<br>
-        What to bring: Your laptop and excitement for technology!</p>
-        <%= render "info_session_attendees/info_session_attendee_form" %>
-      </div>
-    </div>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-  </div>
-</div>
-<div id="workshopModal" class="modal modal-fixed-footer">
-  <div class="modal-content">
-    <div class="row">
-      <div class="col s12">
-        <h5><i class="fa fa-edit"></i> Register for a free workshop</h5>
-        <p>Get started coding at a Coder Factory workshop. See the campus, meet some of the team and get your hands in some code.</p>
-        <p>When: 2pm - 4pm, Sunday afternoons<br>
-        Where: Coder Factory HQ, 7 Hudson St, Redfern<br>
-        What to bring: Your laptop and excitement for technology!</p>
-        <%= render "workshop_attendees/workshop_attendee_form" %>
-      </div>
-    </div>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-  </div>
-</div>
-<script>
-$(document).ready(function(){
-  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-  $('.modal-trigger').leanModal();
-});
-</script>

@@ -1,6 +1,15 @@
 class WorkshopAttendeesController < ApplicationController
   before_action :authenticate_user! , only: [:destroy]
 
+  def new
+    @workshop_session_attendee = WorkshopAttendee.new
+    @workshop_sessions = WorkshopDate.all
+    @workshop_session_dates = Array.new
+    @workshop_sessions.each do |session|
+      @workshop_session_dates << session.session_date
+    end
+  end
+
   def create
     @workshop_session_attendee = WorkshopAttendee.new(workshop_session_attendee_params)
     @workshop_session_attendee.workshop_date = WorkshopDate.where(session_date: workshop_session_attendee_params[:session_date]).first

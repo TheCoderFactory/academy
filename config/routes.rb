@@ -22,11 +22,13 @@ Rails.application.routes.draw do
 
   resources :workshop_attendees
   resources :workshop_dates
-  get "workshop_sessions"     =>  "workshop_dates#index"
+  get "workshop-sessions"     =>  "workshop_dates#index"
+  get "workshop-sessions/new"   =>  "workshop_attendees#new"
 
   resources :info_session_attendees
   resources :info_session_dates
-  get "information_sessions"   => "info_session_dates#index"
+  get "information-sessions"   => "info_session_dates#index"
+  get "information-sessions/new"  => "info_session_attendees#new"
 
   get "frequently-asked-questions"    => "pages#faq"
   get "curriculum"                    => "pages#curriculum"
