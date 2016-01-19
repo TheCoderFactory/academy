@@ -44,6 +44,7 @@ gem 'ckeditor_rails'
 gem 'will_paginate-materialize'
 gem 'will_paginate'
 gem 'friendly_id'
+gem 'dynamic_sitemaps'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

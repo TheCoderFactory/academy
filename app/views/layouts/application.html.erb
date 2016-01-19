@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<header>
+<head>
   <title><%= content_for?(:title) ? yield(:title) : 'Board the Fast Track to an exciting career in tech @ Coder Factory Academy' %></title>
   <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "See our new improved programmes that help you become a confident coder. Apply for our full time Fast track programme, part time courses and weekend workshops." %>">
   <meta charset="utf-8">
@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= render 'layouts/metatags' %>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Comfortaa:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -26,7 +28,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-</header>
+</head>
 <main>
 <%= render 'layouts/full_navbar' %>
 <div>
@@ -50,15 +52,15 @@
   });
 </script>
 <script>
-    $(function(){
-            jQuery(".player").mb_YTPlayer();
-    });
-  </script>
-  <script>
+$(function(){
+  jQuery(".player").mb_YTPlayer();
+});
+</script>
+<script>
 $(function(){
   $(".button-collapse").sideNav();
 });
-  </script>
+</script>
   <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <%# <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52ee398713b80ae1" async="async"></script> %>
 </main>

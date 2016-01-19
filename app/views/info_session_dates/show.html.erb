@@ -9,10 +9,9 @@
           <table class="table">
             <thead>
               <tr>
-                <th width="20%">Name</th>
-                <th width="20%">Phone</th>
-                <th width="20%">Email</th>
-                <th width="20%">Session Type</th>
+                <th width="30%">Name</th>
+                <th width="30%">Phone</th>
+                <th width="30%">Email</th>
                 <th>Views</th>
                 <th colspan="2"></th>
               </tr>
@@ -24,7 +23,6 @@
                   <td><%= attendee.first_name %> <%= attendee.last_name %></td>
                   <td><%= attendee.phone %></td>
                   <td><%= attendee.email %></td>
-                  <td><%= attendee.session_type %></td>
                   <td><%= link_to '<i class="fa fa-trash-o"></i> Delete'.html_safe, attendee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                 </tr>
               <% end %>

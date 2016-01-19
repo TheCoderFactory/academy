@@ -17,14 +17,23 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  font-family: 'minerva-modern', roboto, sans-serif;
-  <%# font-family: "proxima-nova","dapifer", garamond, serif; %>
+  font-family: 'Source Sans Pro', sans-serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'minerva-modern', roboto, sans-serif;
+  font-family: 'Comfortaa', roboto, sans-serif;
 }
-.h5-inline {
+.p-inline {
   display: inline;
+}
+.p-big {
+  font-size: 25px;
+}
+#background-logo-blue {
+  background-color: #46A8C6;
 }
 nav {
   background-color: rgba(0,0,0,.3);
@@ -33,11 +42,17 @@ section {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+.fixed-width-tabs {
+  width: 100%;
+}
 #contact-cards {
   min-height: 100%;
 }
 strong {
   font-weight: bold;
+}
+.down {
+  padding-top: 10px;
 }
 .btn, .btn-large{
   text-decoration: none;
@@ -61,6 +76,9 @@ strong {
   text-transform: uppercase;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
+}
+.hero-button {
+  width: 100%;
 }
 .vertical {
   position: relative;
@@ -113,8 +131,8 @@ strong {
   background-color: #E0E0E0;
   border: none;
 }
-#team-cards {
-  min-height: 700px;
+#logo-blue-text {
+  color: #46A8C6;
 }
 .border-button {
   border: 3px white solid;
@@ -262,10 +280,9 @@ nav {
   top: 0;
   left: 0;
   z-index: 0;
-  margin-top: -80px;
+  margin-top: -110px;
   color: rgba(255,255,255,0.8);
   padding-top: 10%;
-  /*background-image: url(<%= @video_background %>); */
 }
 .top-bar, .top-bar a {
   color: white;
@@ -340,7 +357,7 @@ nav ul a {
     margin-left: 10px;
   }
   .navbar-fixed {
-  height: 80px; }
+  height: 110px; }
   .nav-logo {
     padding-top: 5px;
 } }

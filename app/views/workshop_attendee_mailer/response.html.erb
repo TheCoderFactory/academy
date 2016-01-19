@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    
+
+    <p>
+    
+    Hi <%= @attendee.first_name %>
+    </p>
+
+    <p>Thanks for registering for the free workshop at Coder Factory Academy.</p>
+
+    <p>Here are the details:</p>
+
+    <p>
+    <strong>Your selected session date:</strong>
+    <%= @attendee.session_date %>
+    </p>
+    <p><strong>Time: </strong>6pm - 8pm</p>
+    <p><strong>What to bring:</strong> Your laptop and excitement for technology.</p>
+
+    <p>
+    <strong>Where:</strong>
+    <br>Located at the <a href="http://coderfactoryacademy.com/contact">Coder Factory Campus</a>.
+    </p>
+
+  </body>
+</html>
