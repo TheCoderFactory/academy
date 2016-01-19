@@ -28,6 +28,7 @@ Rails.application.routes.draw do
 
   resources :info_session_attendees
   resources :info_session_dates
+
   get "information-sessions"      => "info_session_dates#index"
   get "information-sessions/new"  => "info_session_attendees#new"
 
@@ -41,7 +42,7 @@ Rails.application.routes.draw do
   get 'vet-fee-help'                              => "pages#vet_fee_help"
   get 'partners'                                  => "pages#partners"
   get 'testimonials'                              => "pages#testimonials"
-  # get 'video-archive'                           => "pages#video_archive"
+  get 'video-archive'                             => "pages#video_archive"
 
   get "blog"          => "blog#index"
   get "press"         => "press#index"
