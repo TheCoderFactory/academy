@@ -16,32 +16,32 @@ Rails.application.routes.draw do
   get "enquire"       => "enquiries#new"
 
   resources :women_in_tech_scholarships
-  get "women-in-tech/apply"                   => "women_in_tech_scholarships#new"
-  get "women-in-tech"  => "pages#women_in_tech_scholarship"
+  get "women-in-tech/apply"   => "women_in_tech_scholarships#new"
+  get "women-in-tech"         => "pages#women_in_tech_scholarship"
 
   resources :posts
 
   resources :workshop_attendees
   resources :workshop_dates
-  get "workshop-sessions"     =>  "workshop_dates#index"
+  get "workshop-sessions"       =>  "workshop_dates#index"
   get "workshop-sessions/new"   =>  "workshop_attendees#new"
 
   resources :info_session_attendees
   resources :info_session_dates
-  get "information-sessions"   => "info_session_dates#index"
+  get "information-sessions"      => "info_session_dates#index"
   get "information-sessions/new"  => "info_session_attendees#new"
 
-  get "frequently-asked-questions"    => "pages#faq"
-  get "curriculum"                    => "pages#curriculum"
-  get "about"                         => "pages#about"
-  get "about/instructors"             => "pages#instructors"
-  get "contact"                       => "pages#contact"
-  get "privacy"                       => "pages#privacy"
-  get "confirmation"                  => "pages#confirmation"
-  get 'vet-fee-help'                  => "pages#vet_fee_help"
-  get 'partners'                      => "pages#partners"
-  get 'testimonials'                  => "pages#testimonials"
-  # get 'video-archive'               => "pages#video_archive"
+  get "frequently-asked-questions"                => "pages#faq"
+  get "curriculum"                                => "pages#curriculum"
+  get "about-coder-factory-academy"               => "pages#about"
+  get "about-coder-factory-academy/instructors"   => "pages#instructors"
+  get "contact"                                   => "pages#contact"
+  get "privacy"                                   => "pages#privacy"
+  get "confirmation"                              => "pages#confirmation"
+  get 'vet-fee-help'                              => "pages#vet_fee_help"
+  get 'partners'                                  => "pages#partners"
+  get 'testimonials'                              => "pages#testimonials"
+  # get 'video-archive'                           => "pages#video_archive"
 
   get "blog"          => "blog#index"
   get "press"         => "press#index"
