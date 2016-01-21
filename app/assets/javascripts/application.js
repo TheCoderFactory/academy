@@ -17,13 +17,3 @@
 //= require jquery.mb.YTPlayer.min
 //= require jquery.payment
 //= require ckeditor-jquery
-
-(function($){
-  $(function(){
-
-    $('.button-collapse').sideNav();
-    $('.parallax').parallax();
-
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
-
