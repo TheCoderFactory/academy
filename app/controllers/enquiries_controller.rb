@@ -13,7 +13,8 @@ class EnquiriesController < ApplicationController
   def create
     @enquiry = Enquiry.new(enquiry_params)
     if @enquiry.save
-      @enquiry.send_emails
+      # @enquiry.send_emails
+      @enquiry.update_spreadsheet
       redirect_to controller: "pages", action: "confirmation", type: "enquiry"
     else
       respond_with(@enquiry)
