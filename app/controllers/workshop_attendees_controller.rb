@@ -15,7 +15,7 @@ class WorkshopAttendeesController < ApplicationController
     @workshop_session_attendee.workshop_date = WorkshopDate.where(session_date: workshop_session_attendee_params[:session_date]).first
     if @workshop_session_attendee.save
       @workshop_session_attendee.send_emails
-      redirect_to confirmation_path(type: 'registration')
+      redirect_to confirmation_path(type: 'workshop registration')
     else
       redirect_to '/'
     end
