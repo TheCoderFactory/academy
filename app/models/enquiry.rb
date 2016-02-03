@@ -6,7 +6,7 @@ class Enquiry < ActiveRecord::Base
   validates :message, presence: true
 
   def send_emails
-    EnquiryMailerJob.new.async.perform(self.id)
+    EnquiryMailerJob.perform_async(self.id)
   end
 
   def self.reverse_order

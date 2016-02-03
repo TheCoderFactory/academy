@@ -9,6 +9,6 @@ class WorkshopAttendee < ActiveRecord::Base
   validates :email, presence: true, :format => EMAIL_REGEX
 
   def send_emails
-    WorkshopAttendeeMailerJob.new.async.perform(self.id)
+    WorkshopAttendeeMailerJob.perform_async(self.id)
   end
 end

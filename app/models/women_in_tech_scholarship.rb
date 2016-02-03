@@ -9,7 +9,7 @@ class WomenInTechScholarship < ActiveRecord::Base
   validates :accepted_terms, presence: true
 
   def send_emails
-    WomenInTechScholarshipMailerJob.new.async.perform(self.id)
+    WomenInTechScholarshipMailerJob.perform_async(self.id)
   end
 
   def self.reverse_order
