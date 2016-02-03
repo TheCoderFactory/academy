@@ -6,7 +6,7 @@ class WorkshopAttendeesController < ApplicationController
     @workshop_sessions = WorkshopDate.all
     @workshop_session_dates = Array.new
     @workshop_sessions.each do |session|
-      @workshop_session_dates << session.session_date
+      @workshop_session_dates << session.session_date if session.session_date.future?
     end
   end
 

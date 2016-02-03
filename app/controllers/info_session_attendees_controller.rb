@@ -6,7 +6,7 @@ class InfoSessionAttendeesController < ApplicationController
     @info_sessions = InfoSessionDate.all
     @info_session_dates = Array.new
     @info_sessions.each do |session|
-      @info_session_dates << session.session_date
+      @info_session_dates << session.session_date if session.session_date.future?
     end
   end
 
