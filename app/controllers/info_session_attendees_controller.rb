@@ -14,7 +14,8 @@ class InfoSessionAttendeesController < ApplicationController
     @info_session_attendee = InfoSessionAttendee.new(info_session_attendee_params)
     @info_session_attendee.info_session_date = InfoSessionDate.where(session_date: info_session_attendee_params[:session_date]).first
     if @info_session_attendee.save
-      @info_session_attendee.send_emails
+      # @info_session_attendee.send_emails
+      @info_session_attendee.update_spreadsheet
       redirect_to confirmation_path(type: 'registration')
     else
       redirect_to '/'
