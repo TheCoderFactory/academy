@@ -13,6 +13,6 @@ class InfoSessionAttendee < ActiveRecord::Base
   end
 
   def update_spreadsheet
-    InfoSessionToSpreadsheetJob.new.async.perform(self.id)
+    InfoSessionToSpreadsheetJob.perform_async(self.id)
   end
 end

@@ -10,7 +10,7 @@ class Enquiry < ActiveRecord::Base
   end
 
   def update_spreadsheet
-    EnquiryToSpreadsheetJob.new.async.perform(self.id)
+    EnquiryToSpreadsheetJob.perform_async(self.id)
   end
 
   def self.reverse_order

@@ -12,7 +12,7 @@ class AcademyApplication < ActiveRecord::Base
   end
 
   def update_spreadsheet
-    AcademyApplicationToSpreadsheetJob.new.async.perform(self.id)
+    AcademyApplicationToSpreadsheetJob.perform_async(self.id)
   end
 
   def self.reverse_order
