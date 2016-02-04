@@ -18,6 +18,6 @@ class WomenInTechScholarshipMailer < ApplicationMailer
   #
   def received(women_in_tech_scholarship_id)
     @women_in_tech_scholarship = WomenInTechScholarship.find(women_in_tech_scholarship_id)
-    mail(to: "info@coderfactory.com", subject: "Women in Tech Scholarship application received.")
+    mail(to: "info@coderfactory.com", from: "Women In Tech Application <info@coderfactory.com>", subject: "Women in Tech Scholarship application received.")
   end
 end

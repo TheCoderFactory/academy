@@ -8,7 +8,7 @@ class AcademyApplication < ActiveRecord::Base
   validates :referral, length: { maximum: 200 }
 
   def send_emails
-    AcademyApplicationMailerJob.new.async.perform(self.id)
+    AcademyApplicationMailerJob.perform_async(self.id)
   end
 
   def update_spreadsheet

@@ -9,7 +9,7 @@ class InfoSessionAttendee < ActiveRecord::Base
   validates :email, presence: true, :format => EMAIL_REGEX
 
   def send_emails
-    InfoSessionAttendeeMailerJob.new.async.perform(self.id)
+    InfoSessionAttendeeMailerJob.perform_async(self.id)
   end
 
   def update_spreadsheet

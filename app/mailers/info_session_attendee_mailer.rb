@@ -18,6 +18,6 @@ class InfoSessionAttendeeMailer < ApplicationMailer
   #
   def received(attendee_id)
     @attendee = InfoSessionAttendee.find(attendee_id)
-    mail(to: "info@coderfactory.com", subject: "Coder Factory Academy info session registration received.")
+    mail(to: "info@coderfactory.com", from: "Info Session Registration <info@coderfactory.com>", subject: "Coder Factory Academy info session registration received.")
   end
 end

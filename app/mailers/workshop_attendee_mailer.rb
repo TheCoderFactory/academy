@@ -18,6 +18,6 @@ class WorkshopAttendeeMailer < ApplicationMailer
   #
   def received(attendee_id)
     @attendee = WorkshopAttendee.find(attendee_id)
-    mail(to: "info@coderfactory.com", subject: "Coder Factory Academy workshop session registration received.")
+    mail(to: "info@coderfactory.com", from: "Workshop Registration <info@coderfactory.com>", subject: "Coder Factory Academy workshop session registration received.")
   end
 end

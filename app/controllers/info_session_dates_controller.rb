@@ -14,25 +14,25 @@ class InfoSessionDatesController < ApplicationController
   def create
     @new_info_session = InfoSessionDate.new(info_session_date_params)
     if @new_info_session.save
-      redirect_to '/information_sessions'
+      redirect_to '/information-sessions'
     else
-      redirect_to '/information_sessions'
+      redirect_to '/information-sessions'
     end
   end
 
   def update
     @info_session_date = InfoSessionDate.find(params[:id])
     if @info_session_date.update_attributes(post_params)
-      redirect_to '/information_sessions'
+      redirect_to '/information-sessions'
     else
-      redirect_to '/information_sessions'
+      redirect_to '/information-sessions'
     end
   end
 
   def destroy
     @info_session_date = InfoSessionDate.find(params[:id])
     @info_session_date.destroy
-    redirect_to "/information_sessions"
+    redirect_to "/information-sessions"
   end
 
   private
