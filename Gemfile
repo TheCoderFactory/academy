@@ -7,12 +7,10 @@ gem 'rails', '4.2.3'
 gem 'materialize-sass'
 # Use sqlite3 as the database for Active Record
 group :development do
-	gem 'passenger'
 	gem 'sqlite3' 
 end
 
 group :production do
-	gem 'passenger'
 	gem 'rails_12factor'
 	gem 'pg'
 end
@@ -48,6 +46,8 @@ gem 'will_paginate-materialize'
 gem 'will_paginate'
 gem 'friendly_id'
 gem 'dynamic_sitemaps'
+gem 'passenger'
+gem 'rack-zippy'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
