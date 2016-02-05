@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.middleware.use Rack::SslEnforcer
+  # config.middleware.use Rack::SslEnforcer
 
   # Settings specified here will take precedence over those in config/application.rb.
 
