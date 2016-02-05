@@ -48,6 +48,7 @@ gem 'friendly_id'
 gem 'dynamic_sitemaps'
 gem 'passenger'
 gem 'rack-zippy'
+gem 'rack-ssl-enforcer'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

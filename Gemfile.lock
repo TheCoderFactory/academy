@@ -237,6 +237,7 @@ GEM
       rake (>= 0.8.1)
     pg (0.18.4)
     rack (1.6.4)
+    rack-ssl-enforcer (0.2.9)
     rack-test (0.6.3)
       rack (>= 1.0)
     rack-zippy (3.0.1)
@@ -356,6 +357,7 @@ DEPENDENCIES
   materialize-sass
   passenger
   pg
+  rack-ssl-enforcer
   rack-zippy
   rails (= 4.2.3)
   rails_12factor
