@@ -7,10 +7,12 @@ gem 'rails', '4.2.3'
 gem 'materialize-sass'
 # Use sqlite3 as the database for Active Record
 group :development do
+	gem 'passenger'
 	gem 'sqlite3' 
 end
 
 group :production do
+	gem 'passenger'
 	gem 'rails_12factor'
 	gem 'pg'
 end
