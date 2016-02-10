@@ -34,7 +34,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'country_select'
-gem 'responders'
 gem 'sucker_punch'
 gem 'devise'
 gem 'carrierwave'
