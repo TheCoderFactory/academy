@@ -103,6 +103,7 @@ GEM
       warden (~> 1.2.3)
     domain_name (0.5.20160128)
       unf (>= 0.0.5, < 1.0.0)
+    dynamic_sitemaps (2.0.0)
     erubis (2.7.0)
     excon (0.45.4)
     execjs (2.6.0)
@@ -290,10 +291,15 @@ GEM
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
     orm_adapter (0.5.0)
+    passenger (5.0.24)
+      rack
+      rake (>= 0.8.1)
     pg (0.18.4)
     rack (1.6.4)
+    rack-ssl-enforcer (0.2.9)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack-zippy (3.0.1)
     rails (4.2.3)
       actionmailer (= 4.2.3)
       actionpack (= 4.2.3)
@@ -410,6 +416,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   country_select
   devise
+  dynamic_sitemaps
   fist_of_fury
   fog
   friendly_id
@@ -419,7 +426,10 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   materialize-sass
+  passenger
   pg
+  rack-ssl-enforcer
+  rack-zippy
   rails (= 4.2.3)
   rails_12factor
   responders

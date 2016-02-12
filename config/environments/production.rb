@@ -1,4 +1,6 @@
 Rails.application.configure do
+  config.middleware.use Rack::SslEnforcer
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -92,4 +94,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Puts ActionDispatch::Static in middleware stack which we are going to replace with
+  # # Rack::Zippy::AssetServer
+  config.serve_static_assets = true
 end

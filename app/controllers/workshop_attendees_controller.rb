@@ -6,7 +6,7 @@ class WorkshopAttendeesController < ApplicationController
     @workshop_sessions = WorkshopDate.all
     @workshop_session_dates = Array.new
     @workshop_sessions.each do |session|
-      @workshop_session_dates << session.session_date.strftime('%d %B %Y') if session.session_date.future?
+      @workshop_session_dates << session.session_date.strftime('%d %B %Y') if session.session_date.future? && session.session_date.month == DateTime.now.month
     end
   end
 
