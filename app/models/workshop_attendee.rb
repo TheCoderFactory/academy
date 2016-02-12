@@ -11,8 +11,4 @@ class WorkshopAttendee < ActiveRecord::Base
   def send_emails
     WorkshopAttendeeMailerJob.perform_async(self.id)
   end
-
-  def update_spreadsheet
-    WorkshopToSpreadsheetJob.perform_async(self.id)
-  end
 end

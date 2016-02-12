@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SpreadsheetAllControllerTest < ActionController::TestCase
+class UpdateSpreadsheetJobTest < ActiveJob::TestCase
   # test "the truth" do
   #   assert true
   # end

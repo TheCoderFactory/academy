@@ -13,8 +13,7 @@ class AcademyApplicationsController < ApplicationController
   def create
     @academy_application = AcademyApplication.new(academy_application_params)
     if @academy_application.save
-      # @academy_application.send_emails
-      @academy_application.update_spreadsheet
+      @academy_application.send_emails
       redirect_to controller: "pages", action: "confirmation", type: "fast track application"
     else
       respond_with(@academy_application)

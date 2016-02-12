@@ -11,8 +11,4 @@ class InfoSessionAttendee < ActiveRecord::Base
   def send_emails
     InfoSessionAttendeeMailerJob.perform_async(self.id)
   end
-
-  def update_spreadsheet
-    InfoSessionToSpreadsheetJob.perform_async(self.id)
-  end
 end

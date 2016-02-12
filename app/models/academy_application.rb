@@ -11,10 +11,6 @@ class AcademyApplication < ActiveRecord::Base
     AcademyApplicationMailerJob.perform_async(self.id)
   end
 
-  def update_spreadsheet
-    AcademyApplicationToSpreadsheetJob.perform_async(self.id)
-  end
-
   def self.reverse_order
     order(created_at: :desc)
   end

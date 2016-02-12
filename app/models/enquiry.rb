@@ -9,10 +9,6 @@ class Enquiry < ActiveRecord::Base
     EnquiryMailerJob.perform_async(self.id)
   end
 
-  def update_spreadsheet
-    EnquiryToSpreadsheetJob.perform_async(self.id)
-  end
-
   def self.reverse_order
     order(created_at: :desc)
   end

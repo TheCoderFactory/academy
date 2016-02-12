@@ -46,6 +46,7 @@ gem 'will_paginate'
 gem 'friendly_id'
 gem 'google_drive'
 gem 'google-api-client', '~> 0.7.1'
+gem 'fist_of_fury'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

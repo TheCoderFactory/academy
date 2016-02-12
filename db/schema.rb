@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160118025854) do
+ActiveRecord::Schema.define(version: 20160212003603) do
 
   create_table "academy_applications", force: :cascade do |t|
     t.string   "first_name"
@@ -32,26 +32,11 @@ ActiveRecord::Schema.define(version: 20160118025854) do
     t.string   "referral"
     t.boolean  "visa"
     t.string   "programme_choice"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.string   "phone"
+    t.boolean  "in_spreadsheet",   default: false
   end
-
-  create_table "ckeditor_assets", force: :cascade do |t|
-    t.string   "data_file_name",               null: false
-    t.string   "data_content_type"
-    t.integer  "data_file_size"
-    t.integer  "assetable_id"
-    t.string   "assetable_type",    limit: 30
-    t.string   "type",              limit: 30
-    t.integer  "width"
-    t.integer  "height"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-  end
-
-  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
-  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
 
   create_table "enquiries", force: :cascade do |t|
     t.string   "first_name"
@@ -59,9 +44,10 @@ ActiveRecord::Schema.define(version: 20160118025854) do
     t.string   "phone"
     t.string   "email"
     t.text     "message"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "enquiry_type"
+    t.boolean  "in_spreadsheet", default: false
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -84,8 +70,9 @@ ActiveRecord::Schema.define(version: 20160118025854) do
     t.string   "email"
     t.date     "session_date"
     t.integer  "info_session_date_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.boolean  "in_spreadsheet",       default: false
   end
 
   create_table "info_session_dates", force: :cascade do |t|
@@ -94,31 +81,8 @@ ActiveRecord::Schema.define(version: 20160118025854) do
     t.datetime "updated_at",   null: false
   end
 
-  create_table "newsletter_users", force: :cascade do |t|
-    t.string   "first_name", null: false
-    t.string   "last_name",  null: false
-    t.string   "email",      null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "title"
-    t.text     "lead"
-    t.text     "content"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.boolean  "publish"
-    t.date     "published_date"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "slug"
-  end
-
-  create_table "press_posts", force: :cascade do |t|
     t.string   "title"
     t.text     "lead"
     t.text     "content"
@@ -127,16 +91,14 @@ ActiveRecord::Schema.define(version: 20160118025854) do
     t.date     "published_date"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.string   "slug"
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email",                  default: "", null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.string   "image"
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -175,8 +137,9 @@ ActiveRecord::Schema.define(version: 20160118025854) do
     t.string   "email"
     t.date     "session_date"
     t.integer  "workshop_date_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.boolean  "in_spreadsheet",   default: false
   end
 
   create_table "workshop_dates", force: :cascade do |t|
