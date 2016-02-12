@@ -3,11 +3,11 @@ ruby "2.3.0"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
+gem 'rails', '4.2.5'
 gem 'materialize-sass'
 # Use sqlite3 as the database for Active Record
 group :development do
-	gem 'sqlite3' 
+	gem 'sqlite3'
 end
 
 group :production do
@@ -34,7 +34,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'country_select'
-gem 'responders'
 gem 'sucker_punch'
 gem 'devise'
 gem 'carrierwave'
@@ -50,7 +49,7 @@ gem 'google-api-client', '~> 0.7.1'
 gem 'fist_of_fury'
 gem 'dynamic_sitemaps'
 gem 'passenger'
-gem 'rack-zippy'
+gem 'rack-zippy', '3.0.1'
 gem 'rack-ssl-enforcer'
 
 group :development, :test do
@@ -63,4 +62,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-

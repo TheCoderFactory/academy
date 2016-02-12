@@ -1,14 +1,42 @@
-<div class="container">
+<section id="workshop"><div class="container">
 <div class="row">
   <div class="card">
     <div class="card-content">
-      <h5><i class="fa fa-edit"></i> Register for a free workshop</h5>
-      <p>Get started coding at a Coder Factory workshop. See the campus, meet some of the team and get your hands in some code.</p>
-      <p>When: 2pm - 4pm, Sunday afternoons<br>
-      Where: Coder Factory HQ, 7 Hudson St, Redfern<br>
-      What to bring: Your laptop and excitement for technology!</p>
-      <%= render "workshop_attendee_form" %>
+      <h3><i class="fa fa-edit"></i> Register for a free workshop</h3>
+      <p class="flow-text">Get started coding at a Coder Factory workshop. See the campus, meet some of the team and get your hands in some code.</p>
+      <br />
+      <table class="bordered">
+        <tr>
+          <th>
+            When
+          </th>
+          <td>
+            2pm - 4pm, Sunday afternoons
+          </td>
+        </tr>
+          <tr>
+            <th>
+              Where
+            </th>
+            <td>
+              Coder Factory HQ, 7 Hudson St, Redfern
+            </td>
+          </tr>
+            <tr>
+              <th>
+                When
+              </th>
+              <td>
+                Your laptop and excitement for building technology!
+              </td>
+            </tr>
+      </table>
+      <br />
+
+            <%= render "workshop_attendee_form" %>
+
     </div>
   </div>
 </div>
 </div>
+</section>

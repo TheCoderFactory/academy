@@ -3,6 +3,7 @@
 <% else %>
   <%= simple_form_for(@info_session_attendee) do |f| %>
     <%= f.error_notification %>
+    <div class=" light-blue-text">
     <div class="row">
       <div class="form-group input-field col s12">
 
@@ -23,10 +24,10 @@
         <%= f.input :email, label: "Email Address", input_html: {class: "form-controli"} %>
       </div>
     </div>
-
+  </div>
     <div class="row">
       <div class="col s12">
-        <%= f.button :submit, "Register", class: "info-session-button black-text btn-large" %>
+        <button type="submit" class="info-session-button white-text btn-large"><i class='fa fa-user-plus'></i> Register</button>
       </div>
     </div>
   <% end %>

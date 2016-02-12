@@ -1,6 +1,7 @@
 <% if @workshop_session_dates.empty? %>
-  <h3>There are currently no scheduled info sessions. Please check back later for more.</h3>
+  <p class="flow-text">There are currently no scheduled info sessions. Please check back later for more.</p>
 <% else %>
+<div class=" light-blue-text">
   <%= simple_form_for(@workshop_session_attendee) do |f| %>
     <%= f.error_notification %>
     <div class="row">
@@ -26,8 +27,11 @@
 
     <div class="row">
       <div class="col s12">
-        <%= f.button :submit, "Register", class: "info-session-button black-text btn-large" %>
+        <button type="submit" class="info-session-button white-text btn-large"><i class='fa fa-user-plus'></i> Register</button>
+        
       </div>
     </div>
   <% end %>
+
+  </div>
 <% end %>

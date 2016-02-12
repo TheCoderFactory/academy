@@ -1,20 +1,22 @@
 <%= content_for :title, "Thankyou for your #{@type}." %>
 <%= content_for :description, "Your #{@type} has been received. You should hear back from us within 1-2 business days." %>
-<div class="container">
+<section id="workshop">
+  <div class="container">
   <div class="row">
     <div class="col s10 offset-s1">
       <div class="card">
         <div class="card-content">
-          <center>
-            <p class="flow-text">Thank you for your <%= @type %>. An email has been sent to your specified email address. If you have not received one, check your Junk/Spam folder.<br><br> Our team will be in touch shortly.</p>
+            <h3>Thanks for your <%= @type %>. <i class="fa fa-smile-o fa-fw"></i></h3>
+            <p class="flow-text">An email has been sent to the email address you provided and our team will be in touch shortly.</p>
             <br><br>
             <h4>Wondering what to do now?</h4>
-            <p class="flow-text">Go check out our <a href="/video-archive">video archive</a> to find out just what Coder Factory is all about.</p>
+            <p class="flow-text">Go check out our <a href="/video-archive"><i class="fa fa-play-circle fa-fw"></i> video archive</a> to find out what Coder Factory is all about.</p>
             <h4>Videos not your thing?</h4>
-            <p class="flow-text">Read up on whats happening in <a href="/blog">our blog</a>.</p>
-          </center>
+            <p class="flow-text">Read up on whats happening in <a href="/blog"><i class="fa fa-book fa-fw"></i> our blog</a>.</p>
+
         </div>
       </div>
     </div>
   </div>
 </div>
+</section>
