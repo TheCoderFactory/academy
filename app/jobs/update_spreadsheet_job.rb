@@ -6,8 +6,8 @@ class UpdateSpreadsheetJob
   include SuckerPunch::Job
   include FistOfFury::Recurrent
 
-  # recurs{daily.hour_of_day(9)}
-  # recurs{daily.hour_of_day(17)}
+  recurs{daily.hour_of_day(9)}
+  recurs{daily.hour_of_day(17)}
 
   def putInSpreadsheet(item)
     ident = ""
