@@ -45,4 +45,7 @@ Rails.application.routes.draw do
 
   get "blog"          => "blog#index"
   get "press"         => "press#index"
+
+  get "drive"         => "drive_api#index"
+  get "run"           => "spreadsheet_all#run"
 end
