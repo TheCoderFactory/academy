@@ -2,6 +2,9 @@ class PagesController < ApplicationController
   def about
   end
 
+  def careers
+  end
+
   def community
   end
 
