@@ -46,6 +46,4 @@ Rails.application.routes.draw do
 
   get "blog"          => "blog#index"
   get "press"         => "press#index"
-
-  get "update_spreadsheet"  =>  "update_spreadsheet#update"
 end
