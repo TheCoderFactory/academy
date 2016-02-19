@@ -42,11 +42,10 @@ Rails.application.routes.draw do
   get "partners"                                  => "pages#partners"
   get "testimonials"                              => "pages#testimonials"
   get "video-archive"                             => "pages#video_archive"
-  get "career-outcomes"                            => "pages#careers"
+  get "career-outcomes"                           => "pages#careers"
 
   get "blog"          => "blog#index"
   get "press"         => "press#index"
 
-  get "drive"         => "drive_api#index"
-  get "run"           => "spreadsheet_all#run"
+  get "update_spreadsheet"  =>  "update_spreadsheet#update"
 end
