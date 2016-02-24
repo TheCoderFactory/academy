@@ -11,6 +11,7 @@ class WomenInTechScholarshipsController < ApplicationController
 
   def new
     @women_in_tech_scholarship = WomenInTechScholarship.new
+    redirect_to "/women-in-tech"
   end
 
   def create
