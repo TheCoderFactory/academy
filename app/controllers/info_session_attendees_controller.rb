@@ -6,8 +6,11 @@ class InfoSessionAttendeesController < ApplicationController
     @info_sessions = InfoSessionDate.all
     @info_session_dates = Array.new
     @info_sessions.each do |session|
-      @info_session_dates << session.session_date.strftime('%d %B %Y') if session.session_date.future? && session.session_date.month ==DateTime.now.month
+      @info_session_dates << session.session_date.strftime('%d %B %Y') if session.session_date.future?
     end
+    @info_session_dates.sort! { |a,b|  DateTime.parse(a) <=> DateTime.parse(b) }
+    @info_session_date = Array.new
+    @info_session_date << @info_session_dates.first
   end
 
   def create
