@@ -4,9 +4,6 @@ require "google_drive"
 
 class UpdateSpreadsheetJob
   include SuckerPunch::Job
-  include FistOfFury::Recurrent
-
-  recurs{daily.hour_of_day(9, 17)}
 
   def putInSpreadsheet(item)
     ident = ""
