@@ -19,13 +19,17 @@
     <span id="logo-blue-text" class="card-title grey-text text-darken-2">Next Info Session</span>
     <p>
 
-    Date: <%= @info_session_date.first %>
-  <br>
-  Price: FREE
-  <br>
-  <span class="">
-    <a class="btn btn-large info-session-button waves-effect waves-light full-width" href="/information-sessions/new"><i class="material-icons right">send</i>Book Now</a>
-  </span>
+    <% if !@info_session_date.nil? %>
+      Date: <%= @info_session_date.first %>
+    <br>
+    Price: FREE
+    <br>
+    <span class="">
+      <a class="btn btn-large info-session-button waves-effect waves-light full-width" href="/information-sessions/new"><i class="material-icons right">send</i>Book Now</a>
+    </span>
+  <% else %>
+    There are currently no info sessions scheduled. Check back later for more.
+  <% end %>
     </p>
   </div>
 </div>
