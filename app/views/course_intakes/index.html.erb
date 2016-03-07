@@ -1,0 +1,49 @@
+<section id="top-section">
+<div class="container">
+  <div class="row">
+    <div class="col m12">
+      <h2>Course Intakes</h2>
+      <div class="card">
+        <div class="card-content">
+          <%= link_to 'New Course Intake', new_course_intake_path, class: 'btn btn-large submit-button' %>
+          <table class="table">
+            <thead>
+              <tr>
+                <th width="40%">Start Date</th>
+                <th width="15%">Finish Date</th>
+                <th width="10%">Campus</th>
+                <th width="15%">Class Size</th>
+                <th>Views</th>
+                <th colspan="2"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @course_intakes.each do |ci| %>
+                <tr>
+                  <td><%= ci.start_date%></td>
+                  <td><%= ci.finish_date %></td>
+                  <td><%= ci.campus %></td>
+                  <td><%= ci.class_size %></td>
+                  <td><%= link_to '<i class="fa fa-pencil"></i> Edit'.html_safe, edit_course_intake_path(ci) %></td>
+                  <td><%= link_to '<i class="fa fa-trash-o"></i> Delete'.html_safe, ci, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <% if @course_intakes.size == 0 %>
+            <center>
+              <h3>There are currently no course intakes.<br> Fix this using the "New Course Intake" button located above.</h3>
+            </center>
+          <% end %>
+        </div>
+      </div>
+      <div class="card">
+        <center>
+          <%= will_paginate @course_intakes %>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
