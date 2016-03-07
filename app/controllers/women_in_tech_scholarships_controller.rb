@@ -11,13 +11,12 @@ class WomenInTechScholarshipsController < ApplicationController
 
   def new
     @women_in_tech_scholarship = WomenInTechScholarship.new
-    redirect_to "/women-in-tech"
   end
 
   def create
     @women_in_tech_scholarship = WomenInTechScholarship.new(women_in_tech_scholarship_params)
     if @women_in_tech_scholarship.save
-      @women_in_tech_scholarship.send_emails
+      #@women_in_tech_scholarship.send_emails
       redirect_to controller: "pages", action: "confirmation", type: "scholarship application"
     else
       respond_with(@women_in_tech_scholarship)
