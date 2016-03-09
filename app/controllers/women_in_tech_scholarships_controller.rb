@@ -11,6 +11,11 @@ class WomenInTechScholarshipsController < ApplicationController
 
   def new
     @women_in_tech_scholarship = WomenInTechScholarship.new
+    @course_intakes = CourseIntake.all
+    @course_intakes_clean = Array.new
+    @course_intakes.each do |ci|
+      @course_intakes_clean << [(ci.start_date.strftime('%d %B %Y') + ", " + ci.campus), ci.id]
+    end
   end
 
   def create
@@ -32,6 +37,6 @@ class WomenInTechScholarshipsController < ApplicationController
 
   private
   def women_in_tech_scholarship_params
-    params.require(:women_in_tech_scholarship).permit(:first_name, :last_name, :email, :phone, :age, :reason, :career, :links, :accepted_terms, :portfolio)
+    params.require(:women_in_tech_scholarship).permit(:first_name, :last_name, :email, :phone, :age, :reason, :career, :links, :accepted_terms, :portfolio, :course_intake_id)
   end
 end

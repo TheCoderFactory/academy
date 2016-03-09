@@ -8,6 +8,8 @@ class WomenInTechScholarship < ActiveRecord::Base
   validates :reason, :career, presence: true
   validates :accepted_terms, presence: true
 
+  belongs_to :course_intake
+
   def send_emails
     WomenInTechScholarshipMailerJob.perform_async(self.id)
   end
