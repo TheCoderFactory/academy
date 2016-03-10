@@ -1,8 +1,18 @@
 <%= simple_form_for(@academy_application) do |f| %>
   <div class="card">
     <div class="card-content">
-      <h2>Fast Track Application</h2>
-      <h5>Part 1: Personal information</h5>
+      <div class="row">
+        <h2>Fast Track Application</h2>
+      </div>
+      <div class="row">
+        <div class="form-group col m6 s12 input-field">
+          <%= f.select :course_intake_id, @course_intakes_clean, input_html: { class: 'form-control'} %>
+          <label for="course_intake">Please select the course intake that you are applying for.</label>
+        </div>
+      </div>
+      <div class="row">
+        <h5>Part 1: Personal information</h5>
+      </div>
       <br>
       <div class="row">
         <div class="form-group col m6 s12 input-field">
@@ -35,10 +45,10 @@
       </div>
       <br>
       <div class="row">
-        <div class="form-group col m5 s12 input-field">
+        <div class="form-group col m6 s12 input-field">
           <%= f.input :phone, input_html: { class: 'form-control' } %>
         </div>
-        <div class="form-group col m7 s12 input-field">
+        <div class="form-group col m6 s12 input-field">
           <%= f.input :email, input_html: { class: 'form-control' } %>
         </div>
       </div>

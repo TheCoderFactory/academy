@@ -2,7 +2,7 @@ class InfoSessionDatesController < ApplicationController
   before_action :authenticate_user! , only: [:index, :show, :create, :update, :destroy]
 
   def index
-    @info_session_dates = InfoSessionDate.all.paginate(:page => params[:page], :per_page => 5)
+    @info_session_dates = InfoSessionDate.all.reverse_chron_order.paginate(:page => params[:page], :per_page => 5)
     @new_info_session = InfoSessionDate.new
   end
 

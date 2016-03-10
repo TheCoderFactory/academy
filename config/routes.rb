@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get "women-in-tech/apply"   => "women_in_tech_scholarships#new"
   get "women-in-tech"         => "pages#women_in_tech_scholarship"
 
+  resources :course_intakes
+
   resources :posts
 
   get "workshop-sessions"       =>  "workshop_dates#index"
@@ -48,4 +50,5 @@ Rails.application.routes.draw do
   get "press"         => "press#index"
 
   get "update-spreadsheet"  => "update_spreadsheet#update"
+  get "move-course-intake"  => "update_spreadsheet#course_intake"
 end

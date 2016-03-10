@@ -7,6 +7,7 @@
         <h5>Scholarship Applications</h5>
         <div class="card">
           <div class="card-content">
+            <span class="card-title">Course Intake: <%= @course_intake.start_date.strftime('%d %B %Y') + ", " + @course_intake.campus if @course_intake %></span>
             <table>
               <thead>
                 <tr>

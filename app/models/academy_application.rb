@@ -7,6 +7,8 @@ class AcademyApplication < ActiveRecord::Base
   validates :one_line, :reason, :info, :passion, :experience, :challenge, :special, presence: true
   validates :referral, length: { maximum: 200 }
 
+  belongs_to :course_intake
+
   def send_emails
     AcademyApplicationMailerJob.perform_async(self.id)
   end

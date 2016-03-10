@@ -2,7 +2,12 @@ class WomenInTechScholarshipsController < ApplicationController
   before_action :authenticate_user! , only: [:index, :show, :destroy]
 
   def index
-    @women_in_tech_scholarships = WomenInTechScholarship.all.reverse_order.paginate(:page => params[:page], :per_page => 10)
+    if params[:course_intake_id]
+      @course_intake = CourseIntake.find(params[:course_intake_id])
+      @women_in_tech_scholarships = @course_intake.women_in_tech_scholarships.reverse_order.paginate(:page => params[:page], :per_page => 10)
+    else
+      @women_in_tech_scholarships = WomenInTechScholarship.all.reverse_order.paginate(:page => params[:page], :per_page => 10)
+    end
   end
 
   def show
@@ -11,7 +16,11 @@ class WomenInTechScholarshipsController < ApplicationController
 
   def new
     @women_in_tech_scholarship = WomenInTechScholarship.new
-    redirect_to "/women-in-tech"
+    @course_intakes = CourseIntake.all
+    @course_intakes_clean = Array.new
+    @course_intakes.each do |ci|
+      @course_intakes_clean << [(ci.start_date.strftime('%d %B %Y') + ", " + ci.campus), ci.id]
+    end
   end
 
   def create
@@ -33,6 +42,6 @@ class WomenInTechScholarshipsController < ApplicationController
 
   private
   def women_in_tech_scholarship_params
-    params.require(:women_in_tech_scholarship).permit(:first_name, :last_name, :email, :phone, :age, :reason, :career, :links, :accepted_terms, :portfolio)
+    params.require(:women_in_tech_scholarship).permit(:first_name, :last_name, :email, :phone, :age, :reason, :career, :links, :accepted_terms, :portfolio, :course_intake_id)
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160219061649) do
+ActiveRecord::Schema.define(version: 20160309015408) do
 
   create_table "academy_applications", force: :cascade do |t|
     t.string   "first_name"
@@ -36,6 +36,16 @@ ActiveRecord::Schema.define(version: 20160219061649) do
     t.datetime "updated_at",                       null: false
     t.string   "phone"
     t.boolean  "in_spreadsheet",   default: false
+    t.integer  "course_intake_id"
+  end
+
+  create_table "course_intakes", force: :cascade do |t|
+    t.date     "start_date"
+    t.date     "finish_date"
+    t.string   "campus"
+    t.integer  "class_size"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "enquiries", force: :cascade do |t|
@@ -131,11 +141,12 @@ ActiveRecord::Schema.define(version: 20160219061649) do
     t.text     "reason"
     t.text     "career"
     t.string   "links"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "age"
     t.boolean  "accepted_terms"
     t.string   "portfolio"
+    t.integer  "course_intake_id"
   end
 
   create_table "workshop_attendees", force: :cascade do |t|

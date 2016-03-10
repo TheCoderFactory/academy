@@ -2,11 +2,21 @@ class AcademyApplicationsController < ApplicationController
   before_action :authenticate_user! , only: [:index, :show, :destroy]
 
   def index
-    @academy_applications = AcademyApplication.all.reverse_order.paginate(:page => params[:page], :per_page => 10)
+    if params[:course_intake_id]
+      @course_intake = CourseIntake.find(params[:course_intake_id])
+      @academy_applications = @course_intake.academy_applications.reverse_order.paginate(:page => params[:page], :per_page => 10)
+    else
+      @academy_applications = AcademyApplication.all.reverse_order.paginate(:page => params[:page], :per_page => 10)
+    end
   end
 
   def new
     @academy_application = AcademyApplication.new
+    @course_intakes = CourseIntake.all
+    @course_intakes_clean = Array.new
+    @course_intakes.each do |ci|
+      @course_intakes_clean << [(ci.start_date.strftime('%d %B %Y') + ", " + ci.campus), ci.id]
+    end
     respond_with(@academy_application)
   end
 
@@ -32,6 +42,6 @@ class AcademyApplicationsController < ApplicationController
 
   private
   def academy_application_params
-    params.require(:academy_application).permit(:first_name, :last_name, :city, :country, :email, :phone, :age, :gender, :one_line, :reason, :info, :passion, :experience, :challenge, :special, :links, :referral)
+    params.require(:academy_application).permit(:first_name, :last_name, :city, :country, :email, :phone, :age, :gender, :one_line, :reason, :info, :passion, :experience, :challenge, :special, :links, :referral, :course_intake_id)
   end
 end
