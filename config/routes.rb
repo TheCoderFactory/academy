@@ -50,4 +50,5 @@ Rails.application.routes.draw do
   get "press"         => "press#index"
 
   get "update-spreadsheet"  => "update_spreadsheet#update"
+  get "move-course-intake"  => "update_spreadsheet#course_intake"
 end
