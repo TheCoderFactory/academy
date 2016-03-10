@@ -43,9 +43,9 @@ ActiveRecord::Schema.define(version: 20160309015408) do
     t.date     "start_date"
     t.date     "finish_date"
     t.string   "campus"
-    t.integer  "class_size"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "class_size"
   end
 
   create_table "enquiries", force: :cascade do |t|
@@ -89,14 +89,6 @@ ActiveRecord::Schema.define(version: 20160309015408) do
     t.date     "session_date"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-  end
-
-  create_table "mailing_list_users", force: :cascade do |t|
-    t.string   "email"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|
