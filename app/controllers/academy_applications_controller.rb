@@ -2,7 +2,12 @@ class AcademyApplicationsController < ApplicationController
   before_action :authenticate_user! , only: [:index, :show, :destroy]
 
   def index
-    @academy_applications = AcademyApplication.all.reverse_order.paginate(:page => params[:page], :per_page => 10)
+    if params[:course_intake_id]
+      @course_intake = CourseIntake.find(params[:course_intake_id])
+      @academy_applications = @course_intake.academy_applications.reverse_order.paginate(:page => params[:page], :per_page => 10)
+    else
+      @academy_applications = AcademyApplication.all.reverse_order.paginate(:page => params[:page], :per_page => 10)
+    end
   end
 
   def new
