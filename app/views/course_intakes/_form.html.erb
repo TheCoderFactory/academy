@@ -13,6 +13,12 @@
     <div class="form-group input-field">
       <%= f.input :class_size %>
     </div>
+      <%= f.check_box :allow_academy_applications, as: :boolean, id: "checkbox1" %>
+      <label for="checkbox1">Allow Academy Applications</label>
+    <br>
+      <%= f.check_box :allow_scholarship_applications, as: :boolean, id: "checkbox2" %>
+      <label for="checkbox2">Allow Scholarship Applications</label>
+    <br>
   </div>
 
   <div class="form-actions">

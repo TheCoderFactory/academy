@@ -40,6 +40,6 @@ class CourseIntakesController < ApplicationController
 
   private
   def course_intake_params
-    params.require(:course_intake).permit(:start_date, :finish_date, :campus, :class_size)
+    params.require(:course_intake).permit(:start_date, :finish_date, :campus, :class_size, :allow_academy_applications, :allow_scholarship_applications)
   end
 end
