@@ -16,7 +16,7 @@ class WomenInTechScholarshipsController < ApplicationController
 
   def new
     @women_in_tech_scholarship = WomenInTechScholarship.new
-    @course_intakes = CourseIntake.all.where(allow_scholarship_applications: true)
+    @course_intakes = CourseIntake.all.where(allow_scholarship_applications: true).order(:start_date)
     @course_intakes_clean = Array.new
     @course_intakes.each do |ci|
       @course_intakes_clean << [(ci.start_date.strftime('%d %B %Y') + ", " + ci.campus), ci.id]

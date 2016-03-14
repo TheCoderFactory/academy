@@ -2,7 +2,7 @@ class CourseIntakesController < ApplicationController
   before_action :authenticate_user! , only: [:index, :new, :create, :edit, :update, :destroy]
 
   def index
-    @course_intakes = CourseIntake.all.paginate(:page => params[:page], :per_page => 10)
+    @course_intakes = CourseIntake.all.order(:start_date).paginate(:page => params[:page], :per_page => 10)
   end
 
   def new
