@@ -1,10 +1,27 @@
-<%= content_for :title, "Thankyou for your #{@type}." %>
-<%= content_for :description, "Your #{@type} has been received. You should hear back from us within 1-2 business days." %>
+<% if @type == "expo" %>
+  <meta HTTP-EQUIV="REFRESH" content="5; url=<%= expo_path %>">
+  <section id="workshop">
+    <div class="container">
+      <div class="row">
+        <div class="col s10 offset-s1">
+          <div class="card">
+            <div class="card-content">
+              <h3>Something about you'll be notified if you win.</h3>
+              <p class="flow-text">An email has been sent to the email address you provided and our team will be in touch shortly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<% else %>
+  <%= content_for :title, "Thankyou for your #{@type}." %>
+  <%= content_for :description, "Your #{@type} has been received. You should hear back from us within 1-2 business days." %>
 
-<% if @type == "fast track application" %>
-  <% content_for :conversion_code do %>
-    <!-- Facebook Conversion Code for New application page -->
-    <script>(function() {
+  <% if @type == "fast track application" %>
+    <% content_for :conversion_code do %>
+      <!-- Facebook Conversion Code for New application page -->
+      <script>(function() {
 var _fbq = window._fbq || (window._fbq = []);
 if (!_fbq.loaded) {
   var fbds = document.createElement('script');
@@ -17,11 +34,11 @@ if (!_fbq.loaded) {
 })();
 window._fbq = window._fbq || [];
 window._fbq.push(['track', '6009004318024', {'value':'0.00','currency':'AUD'}]);
-    </script>
-    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6009004318024&amp;cd[value]=0.00&amp;cd[currency]=AUD&amp;noscript=1" /></noscript>
-  <% end %>
-  <!-- Google Code for Application Submission Conversion Page -->
-  <script type="text/javascript">
+      </script>
+      <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6009004318024&amp;cd[value]=0.00&amp;cd[currency]=AUD&amp;noscript=1" /></noscript>
+    <% end %>
+    <!-- Google Code for Application Submission Conversion Page -->
+    <script type="text/javascript">
 /* <![CDATA[ */
 var google_conversion_id = 934347748;
 var google_conversion_language = "en";
@@ -30,33 +47,34 @@ var google_conversion_color = "ffffff";
 var google_conversion_label = "JzwkCPL37GMQ5IfEvQM";
 var google_remarketing_only = false;
 /* ]]> */
-  </script>
-  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-  </script>
-  <noscript>
-    <div style="display:inline">
-      <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/934347748/?label=JzwkCPL37GMQ5IfEvQM&amp;guid=ON&amp;script=0"/>
-    </div>
-  </noscript>
-<% end %>
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+      <div style="display:inline">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/934347748/?label=JzwkCPL37GMQ5IfEvQM&amp;guid=ON&amp;script=0"/>
+      </div>
+    </noscript>
+  <% end %>
 
-<section id="workshop">
-  <div class="container">
-  <div class="row">
-    <div class="col s10 offset-s1">
-      <div class="card">
-        <div class="card-content">
-            <h3>Thanks for your <%= @type %>. <i class="fa fa-smile-o fa-fw"></i></h3>
-            <p class="flow-text">An email has been sent to the email address you provided and our team will be in touch shortly.</p>
-            <br><br>
-            <h4>Wondering what to do now?</h4>
-            <p class="flow-text">Go check out our <a href="/video-archive"><i class="fa fa-play-circle fa-fw"></i> video archive</a> to find out what Coder Factory is all about.</p>
-            <h4>Videos not your thing?</h4>
-            <p class="flow-text">Read up on whats happening in <a href="/blog"><i class="fa fa-book fa-fw"></i> our blog</a>.</p>
+  <section id="workshop">
+    <div class="container">
+      <div class="row">
+        <div class="col s10 offset-s1">
+          <div class="card">
+            <div class="card-content">
+              <h3>Thanks for your <%= @type %>. <i class="fa fa-smile-o fa-fw"></i></h3>
+              <p class="flow-text">An email has been sent to the email address you provided and our team will be in touch shortly.</p>
+              <br><br>
+              <h4>Wondering what to do now?</h4>
+              <p class="flow-text">Go check out our <a href="/video-archive"><i class="fa fa-play-circle fa-fw"></i> video archive</a> to find out what Coder Factory is all about.</p>
+              <h4>Videos not your thing?</h4>
+              <p class="flow-text">Read up on whats happening in <a href="/blog"><i class="fa fa-book fa-fw"></i> our blog</a>.</p>
 
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-</section>
+  </section>
+<% end %>

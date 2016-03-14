@@ -1,0 +1,27 @@
+<%= simple_form_for(@expo_attendee) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="row">
+    <div class="form-group input-field col s6">
+      <%= f.input :first_name, label: "First Name", input_html: {class: "form-control"} %>
+    </div>
+    <div class="form-group input-field col s6">
+      <%= f.input :last_name, label: "Last Name", input_html: {class: "form-control"} %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group input-field col s3">
+      <%= f.input :phone, label: "Phone", input_html: {class: "form-control"} %>
+    </div>
+    <div class="form-group input-field col s9">
+      <%= f.input :email, label: "Email Address", input_html: {class: "form-controli"} %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group input-field col s12">
+    <label for="expo_type">You are:</label><br><br>
+    <%= f.select :expo_type, options_for_select(['A high school student in Australia', 'At university', 'Looking for a career change', 'An education agent', 'A teacher or careers adviser', 'An industry contact', 'Parent of a potential student']), input_html: { class: 'form-control'} %>
+  </div>
+</div>
+  <%= f.button :submit, "Save", class: "btn-large submit-button" %>
+<% end %>

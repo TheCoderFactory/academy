@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+    <p>
+    <%= @expo_attendee.first_name %>, you're in the draw to win two free movie tickets.
+    </p>
+
+    <p>
+    <strong>First name:</strong>
+    <%= @expo_attendee.first_name %>
+    </p>
+
+    <p>
+    <strong>Last name:</strong>
+    <%= @expo_attendee.last_name %>
+    </p>
+
+    <p>
+    <strong>Phone:</strong>
+    <%= @expo_attendee.phone %>
+
+    <p>
+    <strong>Email:</strong>
+    <%= @expo_attendee.email %>
+    </p>
+
+    <p>
+    <strong>You are:</strong>
+    <%= @expo_attendee.expo_type %>
+    </p>
+  </body>
+</html>
