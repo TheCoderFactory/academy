@@ -12,7 +12,7 @@ class AcademyApplicationsController < ApplicationController
 
   def new
     @academy_application = AcademyApplication.new
-    @course_intakes = CourseIntake.all
+    @course_intakes = CourseIntake.all.where(allow_scholarship_applications: true)
     @course_intakes_clean = Array.new
     @course_intakes.each do |ci|
       @course_intakes_clean << [(ci.start_date.strftime('%d %B %Y') + ", " + ci.campus), ci.id]
