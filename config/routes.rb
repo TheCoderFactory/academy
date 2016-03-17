@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   resources :enquiries
   get "enquire"       => "enquiries#new"
 
-  # resources :expo_attendees
-  # get "expo"          => "expo_attendees#new"
+  resources :expo_attendees
+  get "expo"          => "expo_attendees#new"
 
   resources :women_in_tech_scholarships
   get "women-in-tech/apply"   => "women_in_tech_scholarships#new"
