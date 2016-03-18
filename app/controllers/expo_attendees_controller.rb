@@ -1,5 +1,5 @@
 class ExpoAttendeesController < ApplicationController
-  before_action :authenticate_user! , only: [:index, :show, :destroy]
+  before_action :authenticate_user! , only: [:index, :new, :create, :show, :destroy]
 
   def index
     @expo_attendees = ExpoAttendee.all.reverse_order.paginate(:page => params[:page], :per_page => 10)

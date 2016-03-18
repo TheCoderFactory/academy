@@ -22,7 +22,7 @@ class UpdateSpreadsheetJob
     end
 
     session = GoogleDrive.saved_session("config/config.json")
-    ws = session.spreadsheet_by_key("1q1HToULtwI8SoUtArpj1fJR4nMjKB8P8CKIQq4hAMpg").worksheets[0]
+    ws = session.spreadsheet_by_key("1q1HToULtwI8SoUtArpj1fJR4nMjKB8P8CKIQq4hAMpg").worksheets[1]
     start_row = 2
     index_row = ws.num_rows
 

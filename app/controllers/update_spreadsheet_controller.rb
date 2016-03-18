@@ -5,4 +5,9 @@ class UpdateSpreadsheetController < ApplicationController
     UpdateSpreadsheetJob.perform_async
     redirect_to(:back)
   end
+
+  def expo_update
+    UpdateExpoSpreadsheetJob.perform_async
+    redirect_to(:back)
+  end
 end

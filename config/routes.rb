@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get "enquire"       => "enquiries#new"
 
   resources :expo_attendees
-  get "expo"          => "expo_attendees#new"
+  # get "expo"          => "expo_attendees#new"
 
   resources :women_in_tech_scholarships
   get "women-in-tech/apply"   => "women_in_tech_scholarships#new"
@@ -52,5 +52,6 @@ Rails.application.routes.draw do
   get "blog"          => "blog#index"
   get "press"         => "press#index"
 
-  get "update-spreadsheet"  => "update_spreadsheet#update"
+  get "update-spreadsheet"        => "update_spreadsheet#update"
+  get "update-expo-spreadsheet"   => "update_spreadsheet#expo_update"
 end
