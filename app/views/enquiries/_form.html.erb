@@ -1,32 +1,10 @@
-<%= simple_form_for(@enquiry) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="row">
-    <div class="form-group input-field col s6">
-      <%= f.input :first_name, label: "First Name", input_html: {class: "form-control"} %>
-    </div>
-    <div class="form-group input-field col s6">
-      <%= f.input :last_name, label: "Last Name", input_html: {class: "form-control"} %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="form-group input-field col s3">
-      <%= f.input :phone, label: "Phone", input_html: {class: "form-control"} %>
-    </div>
-    <div class="form-group input-field col s9">
-      <%= f.input :email, label: "Email Address", input_html: {class: "form-controli"} %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="form-group input-field col s12">
-    <label for="enquiry_type">You are:</label><br><br>
-    <%= f.select :enquiry_type, options_for_select(['A high school student in Australia', 'At university', 'Looking for a career change', 'An education agent', 'A teacher or careers adviser', 'An industry contact', 'Parent of a potential student']), input_html: { class: 'form-control'} %>
-  </div>
-</div>
-<div class="row">
-  <div class="form-group input-field col s12">
-    <%= f.input :message, label: "Enquiry", input_html: {class: "form-control materialize-textarea"} %>
-  </div>
-</div>
-  <%= f.button :submit, "Send", class: "btn-large submit-button" %>
-<% end %>
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+  hbspt.forms.create({ 
+        portalId: '2106109',
+        formId: '528e7661-cc5a-4076-abe1-33dec87baa0c'
+            });
+</script>
