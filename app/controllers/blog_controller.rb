@@ -1,10 +1,12 @@
 class BlogController < ApplicationController
   def index
     @posts = Post.all.current_articles.paginate(:page => params[:page], :per_page => 5)
+    @ps = Post.all.current_articles
     puts "HHHHHHHH"
-    @posts.each do |p|
+    @ps.each do |p|
       puts p.title
     end
+    puts @ps.count
     @info_sessions = InfoSessionDate.all
     @info_session_dates = Array.new
     @info_sessions.each do |session|
