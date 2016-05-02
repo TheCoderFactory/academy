@@ -10,14 +10,18 @@ class Post < ActiveRecord::Base
 
 
   def self.current_articles
-    published_in_reverse_chron_order.where("published_date <= ?", Date.today)
+    reverse_chron_order.where("published_date <= ?", Date.today)
   end
 
-  def self.published_in_reverse_chron_order
-    reverse_chron_order.where(publish: true)
-  end
+  # def self.published_in_reverse_chron_order
+    # reverse_chron_order.where(publish: true)
+  # end
 
   def self.reverse_chron_order
-    order(published_date: :desc)
+    published?.order(published_date: :desc)
+  end
+
+  def published?
+    where(publish: true)
   end
 end
