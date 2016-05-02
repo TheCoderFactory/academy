@@ -21,7 +21,7 @@ class Post < ActiveRecord::Base
     published?.order(published_date: :desc)
   end
 
-  def published?
+  def self.published?
     where(publish: true)
   end
 end
