@@ -1,7 +1,7 @@
 class BlogController < ApplicationController
   def index
     @posts = Post.all.current_articles.paginate(:page => params[:page], :per_page => 5)
-    @ps = Post.all.current_articles
+    @ps = Post.all.current_articles.paginate(:page => params[:page], :per_page => 5)
     puts "HHHHHHHH"
     @ps.each do |p|
       puts p.title
