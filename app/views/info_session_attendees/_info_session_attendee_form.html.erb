@@ -1,39 +1,12 @@
-<% if @info_session_dates.empty? %>
-  <h3>There are currently no scheduled info sessions. Please check back later for more.</h3>
-<% else %>
-  <%= simple_form_for(@info_session_attendee) do |f| %>
-    <%= f.error_notification %>
-    <div class=" light-blue-text">
-    <div class="row">
-      <div class="form-group input-field col s12">
-
-        <%= f.select :session_date, options_for_select(@info_session_date), input_html: { class: 'form-control'}, prompt: 'Select a session date:' %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="form-group input-field col m3 s12">
-        <%= f.input :first_name, label: "First Name", input_html: {class: "form-control"} %>
-      </div>
-      <div class="form-group input-field col m3 s12">
-        <%= f.input :last_name, label: "Last Name", input_html: {class: "form-control"} %>
-      </div>
-      <div class="form-group input-field col m2 s12">
-        <%= f.input :phone, label: "Phone", input_html: {class: "form-control"} %>
-      </div>
-      <div class="form-group input-field col m4 s12">
-        <%= f.input :email, label: "Email Address", input_html: {class: "form-controli"} %>
-      </div>
-    </div>
-  </div>
-    <div class="row">
-      <div class="col s12">
-        <button type="submit" class="info-session-button white-text btn-large"><i class='fa fa-user-plus'></i> Register</button>
-      </div>
-    </div>
-  <% end %>
-<% end %>
-<%# <script> %>
-<%# $(document).ready(function() { %>
-  <%# $('select').material_select(); %>
-<%# }); %>
-<%# </script> %>
+<center>
+<!--[if lte IE 8]>
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+  <![endif]-->
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+  <script>
+hbspt.forms.create({ 
+  portalId: '2106109',
+  formId: '72e83fda-72e4-4480-b2c6-fa815c7e258d'
+});
+  </script>
+</center>
