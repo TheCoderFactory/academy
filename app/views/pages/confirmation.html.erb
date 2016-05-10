@@ -20,50 +20,9 @@
 
   <% if @type == "fast track application" %>
     <% content_for :conversion_code do %>
-      <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-70142250-1', 'auto');
-ga('send', 'pageview');
-
-      </script>
-      <!-- Facebook Conversion Code for New application page -->
-      <script>(function() {
-var _fbq = window._fbq || (window._fbq = []);
-if (!_fbq.loaded) {
-  var fbds = document.createElement('script');
-  fbds.async = true;
-  fbds.src = '//connect.facebook.net/en_US/fbds.js';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(fbds, s);
-  _fbq.loaded = true;
-}
-})();
-window._fbq = window._fbq || [];
-window._fbq.push(['track', '6009004318024', {'value':'0.00','currency':'AUD'}]);
-      </script>
-      <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6009004318024&amp;cd[value]=0.00&amp;cd[currency]=AUD&amp;noscript=1" /></noscript>
-    <!-- Google Code for Application Submission Conversion Page -->
-    <script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 934347748;
-var google_conversion_language = "en";
-var google_conversion_format = "3";
-var google_conversion_color = "ffffff";
-var google_conversion_label = "JzwkCPL37GMQ5IfEvQM";
-var google_remarketing_only = false;
-/* ]]> */
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-      <div style="display:inline">
-        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/934347748/?label=JzwkCPL37GMQ5IfEvQM&amp;guid=ON&amp;script=0"/>
-      </div>
-    </noscript>
+      <%= render "shared/ga_code" %>
+      <%= render "shared/fb_conversion_code_new_application" %>
+      <%= render "shared/google_code_application_submission" %>
     <% end %>
   <% end %>
 
@@ -80,7 +39,6 @@ var google_remarketing_only = false;
               <p class="flow-text">Go check out our <a href="/video-archive"><i class="fa fa-play-circle fa-fw"></i> video archive</a> to find out what Coder Factory is all about.</p>
               <h4>Videos not your thing?</h4>
               <p class="flow-text">Read up on whats happening in <a href="/blog"><i class="fa fa-book fa-fw"></i> our blog</a>.</p>
-
             </div>
           </div>
         </div>
