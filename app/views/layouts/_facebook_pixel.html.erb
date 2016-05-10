@@ -8,8 +8,10 @@ t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 
 fbq('init', '1027619327300944');
 fbq('track', "PageView");
-<% if @type == "info session registration" || @type == "workshop registration" %>
-fbq('track', 'CompleteRegistration');
+<% if @type == "info session registration" || @type == "enquiry" %>
+  fbq('track', 'Lead');
+<% else %>
+  fbq('track', "PageView");
 <% end %>
 </script>
     <noscript><img height="1" width="1" style="display:none"
