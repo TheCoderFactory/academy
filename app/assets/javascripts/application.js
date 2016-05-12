@@ -17,3 +17,4 @@
 //= require jquery.mb.YTPlayer.min
 //= require jquery.payment
 //= require ckeditor-jquery
+//= require cookie-test
