@@ -3,6 +3,12 @@ class PostsController < ApplicationController
 
   def index
     @posts = current_user.posts.paginate(:page => params[:page], :per_page => 10)
+    @csv_posts = Post.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @csv_posts.to_csv}
+    end
   end
 
   def new

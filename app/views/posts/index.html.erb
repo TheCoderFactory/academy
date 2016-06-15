@@ -6,6 +6,7 @@
       <div class="card">
         <div class="card-content">
           <%= link_to 'New Post', new_post_path, class: 'btn btn-large submit-button' %>
+          <%= link_to 'Download CSV', posts_path(format: "csv") %>
           <table class="table">
             <thead>
               <tr>
