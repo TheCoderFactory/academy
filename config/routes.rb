@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  match '/', to: redirect("https://www.coderfactoryacademy.edu.au")
+  constraints(:host => /coderfactoryacademy.com/) do
+    match "/(*path)" => redirect {|params, req| "https://www.coderfactoryacademy.edu.au/#{params[:path]}"},  via: [:get, :post]
+  end
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
